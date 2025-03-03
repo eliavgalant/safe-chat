@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
 import { MessageCircle } from 'lucide-react';
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -13,18 +11,15 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
-
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
-
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -33,7 +28,6 @@ const Hero = () => {
       });
     }
   };
-
   return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
@@ -89,7 +83,7 @@ const Hero = () => {
               <div className="bg-white/80 p-6 rounded-xl shadow-md text-right">
                 <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4 text-right">הפתרון: SafeChat</h3>
                 <ul className="rtl-text space-y-3 text-gray-700 text-right">
-                  <li className="flex items-center justify-end gap-2">
+                  <li className="flex items-center justify-start gap-2">
                     <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +91,7 @@ const Hero = () => {
                       </svg>
                     </div>
                   </li>
-                  <li className="flex items-center justify-end gap-2">
+                  <li className="flex items-center justify-start gap-2">
                     <span>מזהה תכנים פוגעניים באמצעות בינה מלאכותית מתקדמת</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,10 +99,10 @@ const Hero = () => {
                       </svg>
                     </div>
                   </li>
-                  <li className="flex items-center justify-end gap-2">
+                  <li className="flex items-center justify-start gap-2">
                     <span>שולח התראות להורים בזמן אמת כשמזוהה הודעה בעייתית</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-safechat-gold">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -121,5 +115,4 @@ const Hero = () => {
       </div>
     </div>;
 };
-
 export default Hero;

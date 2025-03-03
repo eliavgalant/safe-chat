@@ -81,7 +81,7 @@ const Hero = () => {
               </p>
               
               <div className="bg-white/80 p-6 rounded-xl shadow-md text-right">
-                <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4 text-right">הפתרון: SafeChat</h3>
+                <h3 className="rtl-text text-xl font-bold mb-4 text-slate-950 text-center">הפתרון: SafeChat</h3>
                 <ul className="rtl-text space-y-3 text-gray-700 text-right">
                   <li className="flex items-center justify-end gap-2 flex-row-reverse\n">
                     <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>

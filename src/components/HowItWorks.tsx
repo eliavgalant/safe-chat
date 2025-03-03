@@ -27,11 +27,11 @@ const HowItWorks = () => {
     title: "התחברות קלה",
     description: "התחברו לשירות באמצעות מספר הטלפון שלכם ובחרו אילו קבוצות וואטסאפ ברצונכם לנטר"
   }, {
-    icon: <Shield className="w-12 h-12 text-safechat-gold" />,
+    icon: <Shield className="w-12 h-12 stroke-red-500" />,
     title: "ניטור רציף",
     description: "המערכת מנטרת באופן אוטומטי את כל ההודעות בקבוצות ומזהה תכנים בעייתיים באמצעות בינה מלאכותית"
   }, {
-    icon: <Bell className="w-12 h-12 text-safechat-gold" />,
+    icon: <Bell className="w-12 h-12 stroke-blue-500" />,
     title: "התראות בזמן אמת",
     description: "קבלו התראות מיידיות כאשר מזוהה התנהגות חשודה או תוכן לא ראוי"
   }];

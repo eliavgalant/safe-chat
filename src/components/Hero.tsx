@@ -91,7 +91,7 @@ const Hero = () => {
                       </svg>
                     </div>
                   </li>
-                  <li className="flex items-center justify-start gap-2">
+                  <li className="flex items-center justify-end gap-2 flex-row-reverse\n">
                     <span>מזהה תכנים פוגעניים באמצעות בינה מלאכותית מתקדמת</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,7 +99,7 @@ const Hero = () => {
                       </svg>
                     </div>
                   </li>
-                  <li className="flex items-center justify-start gap-2">
+                  <li className="flex items-center justify-end gap-2 flex-row-reverse\n">
                     <span>שולח התראות להורים בזמן אמת כשמזוהה הודעה בעייתית</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-safechat-gold">

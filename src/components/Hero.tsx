@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex-1 space-y-6 text-center lg:text-right max-w-2xl mx-auto lg:mx-0">
             <div className="flex justify-center lg:justify-end">
               <div className="w-32 h-32 rounded-full p-3">
-                <img src="/lovable-uploads/b7d8cec6-7ff6-42e6-ab23-fe889af2264a.png" alt="SafeChat Logo" className="w-full h-full object-contain animate-subtle-bounce" />
+                <img alt="SafeChat Logo" className="w-full h-full object-contain animate-subtle-bounce" src="/lovable-uploads/b40aa161-67d2-4633-b913-fdac7ef3b172.png" />
               </div>
             </div>
             
@@ -68,8 +68,8 @@ const Hero = () => {
               </button>
             </div>
             
-            <div className="rtl-text bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-gray-100 shadow-sm shadow-text-light text-gray-600 inline-block">
-              <span className="text-safechat-gold font-semibold">מחיר השקה מיוחד:</span> 49 ₪ לחודש, ללא התחייבות
+            <div className="rtl-text bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-600 inline-block drop-shadow-xl">
+              <span className="font-semibold text-amber-400">מחיר השקה מיוחד:</span> 49 ₪ לחודש, ללא התחייבות
             </div>
           </div>
           

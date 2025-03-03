@@ -1,11 +1,8 @@
-
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
 import { MessageCircle } from 'lucide-react';
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -14,18 +11,15 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
-
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
-
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -34,9 +28,7 @@ const Hero = () => {
       });
     }
   };
-
-  return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
       
@@ -71,8 +63,8 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <p className="rtl-text text-base text-amber-400 font-semibold shadow-text-light">
-              מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-200">| ללא התחייבות</span>
+            <p className="rtl-text text-base text-amber-400 font-semibold">
+              מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
             <div className="mt-12 space-y-6 text-center">
@@ -121,8 +113,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;

@@ -68,8 +68,8 @@ const Hero = () => {
               </button>
             </div>
             
-            <div className="rtl-text bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-600 inline-block drop-shadow-xl">
-              <span className="font-semibold text-amber-400">מחיר השקה מיוחד:</span> 49 ₪ לחודש, ללא התחייבות
+            <div className="rtl-text backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-600 inline-block drop-shadow-xl bg-slate-950">
+              <span className="text-base font-semibold text-zinc-950">מחיר השקה מיוחד:</span> 49 ₪ לחודש, ללא התחייבות
             </div>
           </div>
           

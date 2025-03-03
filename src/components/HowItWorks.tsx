@@ -52,7 +52,7 @@ const HowItWorks = () => {
                 {step.icon}
               </div>
               <h3 className="rtl-text text-xl font-bold mb-4">{step.title}</h3>
-              <p className="rtl-text text-gray-600">{step.description}</p>
+              <p className="rtl-text text-gray-600 text-center">{step.description}</p>
             </div>)}
         </div>
       </div>

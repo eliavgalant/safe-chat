@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
@@ -36,7 +37,7 @@ const Pricing = () => {
 
         <div className="max-w-lg mx-auto">
           <div className="animate-on-scroll relative">
-            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-safechat-gold text-safechat-dark font-bold px-6 py-2 rounded-full z-10">
+            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-safechat-gold text-safechat-dark font-bold px-6 py-2 rounded-full z-10 text-center w-auto">
               מחיר השקה מיוחד
             </div>
             <div className="relative overflow-hidden rounded-2xl">

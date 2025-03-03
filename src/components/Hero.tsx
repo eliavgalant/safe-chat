@@ -67,7 +67,7 @@ const Hero = () => {
               מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
-            <div className="mt-12 space-y-6 text-center">
+            <div className="mt-12 space-y-6 text-center pt-20">
               <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text">
                 הילדים שלכם מוגנים?
               </h2>

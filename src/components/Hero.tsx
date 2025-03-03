@@ -1,8 +1,11 @@
+
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
 import { MessageCircle } from 'lucide-react';
+
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -11,15 +14,18 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
+
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -28,7 +34,9 @@ const Hero = () => {
       });
     }
   };
-  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+
+  return (
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
       
@@ -37,52 +45,84 @@ const Hero = () => {
       <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-safechat-gold/10 rounded-full blur-3xl"></div>
       
       <div ref={heroRef} className="container mx-auto px-4 z-10 opacity-0 transition-opacity duration-1000 ease-out">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-          <div className="flex-1 space-y-6 text-center lg:text-right max-w-2xl mx-auto lg:mx-0">
-            <div className="flex justify-center lg:justify-end">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
+          <div className="flex-1 space-y-6 text-center max-w-2xl mx-auto">
+            <div className="flex justify-center">
               <div className="w-32 h-32 rounded-full p-3">
                 <img alt="SafeChat Logo" className="w-full h-full object-contain animate-subtle-bounce" src="/lovable-uploads/b40aa161-67d2-4633-b913-fdac7ef3b172.png" />
               </div>
             </div>
             
             <h1 className="rtl-text heading-xl text-center">
-              <span className="yellow-500 drop-shadow-md\\n ">SafeChat</span>
+              <span className="gold-text shadow-text">SafeChat</span>
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl text-gradient shadow-text">
-                שומרים על הילדים שלכם ב-WhatsApp
+                שומרים על הילדים שלכם בווטסאפ
               </span>
             </h1>
             
             <p className="rtl-text text-lg md:text-xl text-gray-700 max-w-3xl text-center shadow-text-light">
-              הגנו על ילדיכם מפני בריונות והתנהגות פוגענית בקבוצות וואטסאפ באמצעות מערכת זיהוי אוטומטית המבוססת על בינה מלאכותית
+              זיהוי אוטומטי של בריונות והתנהגות פוגענית בקבוצות הווטסאפ של ילדיכם - בזמן אמת
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <CTAButton size="lg" onClick={() => scrollToSection('pricing')}>
-                התחל עכשיו
+                התחילו להגן על ילדיכם - רק 49 ₪ לחודש
               </CTAButton>
-              
-              <button onClick={() => scrollToSection('how-it-works')} className="flex items-center justify-center gap-2 text-safechat-dark-light hover:text-safechat-gold transition-colors font-medium py-3 shadow-text-light">
-                <span className="rtl-text">איך זה עובד</span>
-                <MessageCircle className="w-5 h-5" />
-              </button>
             </div>
             
-            <div className="rtl-text backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-200 inline-block drop-shadow-xl bg-slate-950">
-              <span className="text-base font-semibold text-amber-400">מחיר השקה מיוחד:</span> 49 ₪ לחודש, ללא התחייבות
+            <div className="rtl-text backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-200 inline-block drop-shadow-xl bg-slate-950 mx-auto">
+              <span className="text-base font-semibold text-amber-400">מחיר השקה מיוחד במקום 150 ₪</span> | ללא התחייבות
             </div>
-          </div>
-          
-          <div className="flex-1 max-w-lg">
-            <div className="relative">
-              <div className="absolute inset-0 bg-safechat-gold rounded-2xl rotate-3 transform-gpu"></div>
-              <div className="glass-card rounded-2xl shadow-xl overflow-hidden relative hidden">
-                <img src="/lovable-uploads/55f69d75-54ee-404e-91ee-8f6bfb533fc2.png" alt="SafeChat Logo" className="w-full h-auto" />
+
+            <div className="mt-12 space-y-6 text-center">
+              <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text">
+                הילדים שלכם מוגנים?
+              </h2>
+              
+              <p className="rtl-text text-xl font-semibold text-gray-800 shadow-text-light">
+                76% מההורים לא יודעים מה באמת קורה בקבוצות הווטסאפ של ילדיהם
+              </p>
+              
+              <p className="rtl-text text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto">
+                ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
+              </p>
+              
+              <div className="bg-white/80 p-6 rounded-xl shadow-md">
+                <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4">הפתרון: SafeChat</h3>
+                <ul className="rtl-text space-y-3 text-gray-700">
+                  <li className="flex items-center justify-end gap-2">
+                    <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
+                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>מזהה תכנים פוגעניים באמצעות בינה מלאכותית מתקדמת</span>
+                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>שולח התראות להורים בזמן אמת כשמזוהה הודעה בעייתית</span>
+                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Hero;

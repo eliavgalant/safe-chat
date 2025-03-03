@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="flex-1 max-w-lg">
             <div className="relative">
               <div className="absolute inset-0 bg-safechat-gold rounded-2xl rotate-3 transform-gpu"></div>
-              <div className="glass-card rounded-2xl shadow-xl overflow-hidden relative">
+              <div className="glass-card rounded-2xl shadow-xl overflow-hidden relative hidden">
                 <img src="/lovable-uploads/55f69d75-54ee-404e-91ee-8f6bfb533fc2.png" alt="SafeChat Logo" className="w-full h-auto" />
               </div>
             </div>

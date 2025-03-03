@@ -57,7 +57,7 @@ const FAQ = () => {
         }}>
               <button className={`w-full rtl-text bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center text-left transition-all
                 ${openIndex === index ? 'bg-safechat-gold/5 border-safechat-gold/30' : 'hover:bg-gray-50'}`} onClick={() => toggleFAQ(index)}>
-                <span className="font-bold text-lg">{faq.question}</span>
+                <span className="font-bold text-lg text-right">{faq.question}</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`} />
               </button>
               

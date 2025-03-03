@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
+
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

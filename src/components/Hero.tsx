@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
             
             <h1 className="rtl-text heading-xl text-center">
-              <span className="gold-gradient-text drop-shadow-md\n">SafeChat</span>
+              <span className="yellow-500 drop-shadow-md\\n ">SafeChat</span>
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl text-gradient shadow-text">
                 שומרים על הילדים שלכם ב-WhatsApp

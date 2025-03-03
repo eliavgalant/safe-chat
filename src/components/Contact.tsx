@@ -8,9 +8,9 @@ import { toast } from "@/components/ui/use-toast";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
-    message: '',
+    parentPhone: '',
+    childPhone: '',
+    notes: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -42,9 +42,9 @@ const Contact = () => {
         });
         setFormData({
           name: '',
-          email: '',
-          phone: '',
-          message: '',
+          parentPhone: '',
+          childPhone: '',
+          notes: '',
         });
       } else {
         throw new Error('Network response was not ok');
@@ -75,57 +75,56 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="glass-card bg-black/40 p-8 rounded-xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="rtl-text text-white block">שם מלא</Label>
+                <Label htmlFor="name" className="rtl-text text-white block">שם</Label>
                 <Input
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="הכנס את שמך המלא"
-                  className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500"
+                  className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold"
                   required
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email" className="rtl-text text-white block">אימייל</Label>
+                <Label htmlFor="parentPhone" className="rtl-text text-white block">טלפון של ההורה</Label>
                 <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
+                  id="parentPhone"
+                  name="parentPhone"
+                  type="tel"
+                  value={formData.parentPhone}
                   onChange={handleChange}
-                  placeholder="הכנס את כתובת האימייל שלך"
-                  className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500"
+                  placeholder="הכנס את מספר הטלפון של ההורה"
+                  className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold"
                   required
                 />
               </div>
             </div>
             
             <div className="space-y-2 mb-6">
-              <Label htmlFor="phone" className="rtl-text text-white block">מספר טלפון</Label>
+              <Label htmlFor="childPhone" className="rtl-text text-white block">טלפון של הילד</Label>
               <Input
-                id="phone"
-                name="phone"
+                id="childPhone"
+                name="childPhone"
                 type="tel"
-                value={formData.phone}
+                value={formData.childPhone}
                 onChange={handleChange}
-                placeholder="הכנס את מספר הטלפון שלך"
-                className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500"
+                placeholder="הכנס את מספר הטלפון של הילד"
+                className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold"
                 required
               />
             </div>
             
             <div className="space-y-2 mb-8">
-              <Label htmlFor="message" className="rtl-text text-white block">הודעה</Label>
+              <Label htmlFor="notes" className="rtl-text text-white block">הערות</Label>
               <textarea
-                id="message"
-                name="message"
-                value={formData.message}
+                id="notes"
+                name="notes"
+                value={formData.notes}
                 onChange={handleChange}
-                placeholder="כתוב את ההודעה שלך כאן"
-                className="rtl-text w-full h-32 bg-black/20 border border-gray-700 rounded-md px-3 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-safechat-gold"
-                required
+                placeholder="כתוב את ההערות שלך כאן"
+                className="rtl-text w-full h-32 bg-black/20 border border-gray-700 rounded-md px-3 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold transition-all duration-200"
               />
             </div>
             

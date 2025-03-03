@@ -1,3 +1,4 @@
+
 import { Shield } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,7 +58,7 @@ const Footer = () => {
                 טלפון: 03-1234567
               </li>
               <li className="mt-4">
-                <a href="#" className="text-white bg-safechat-gold/20 hover:bg-safechat-gold/30 px-4 py-2 rounded-md transition-colors inline-block">
+                <a href="#contact" className="text-white bg-safechat-gold/20 hover:bg-safechat-gold/30 px-4 py-2 rounded-md transition-colors inline-block">
                   צרו קשר
                 </a>
               </li>

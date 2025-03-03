@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -92,7 +93,7 @@ const Contact = () => {
             </div>
             
             <div className="text-center">
-              <Button type="submit" disabled={isSubmitting} className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium text-lg py-4 sm:py-6 px-6 sm:px-8 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg rtl-text min-w-36 sm:min-w-40">
+              <Button type="submit" disabled={isSubmitting} className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium text-xs sm:text-sm md:text-lg py-3 sm:py-4 md:py-6 px-4 sm:px-6 md:px-8 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg rtl-text min-w-28 sm:min-w-36 md:min-w-40">
                 {isSubmitting ? "שולח..." : "שלח הודעה"}
               </Button>
             </div>

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,6 +12,7 @@ const Contact = () => {
     notes: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -21,12 +23,12 @@ const Contact = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      // Replace with your actual webhook URL
-      const webhookUrl = "https://your-webhook-url.com";
+      const webhookUrl = "https://safechat.free.beeceptor.com";
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
@@ -59,6 +61,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
   return <section id="contact" className="bg-safechat-dark-light text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -102,4 +105,5 @@ const Contact = () => {
       </div>
     </section>;
 };
+
 export default Contact;

@@ -63,7 +63,7 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <p className="rtl-text text-base text-amber-400 font-semibold">
+            <p className="rtl-text text-base text-amber-400 font-semibold text-center mt-2">
               מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 

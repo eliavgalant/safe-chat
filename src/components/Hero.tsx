@@ -5,6 +5,7 @@ import { MessageCircle } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -13,15 +14,18 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+    
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
+    
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -30,18 +34,29 @@ const Hero = () => {
       });
     }
   };
-  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
+  
+  return (
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
       
+      {/* Background decorations */}
       <div className="absolute top-1/4 left-10 w-64 h-64 bg-safechat-gold/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-safechat-gold/10 rounded-full blur-3xl"></div>
       
-      <div ref={heroRef} className="container mx-auto px-4 md:px-8 z-10 opacity-0 transition-opacity duration-1000 ease-out">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
-          <div className="flex-1 space-y-6 text-center max-w-2xl mx-auto">
+      {/* Main content container with proper width constraints */}
+      <div 
+        ref={heroRef} 
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 z-10 opacity-0 transition-opacity duration-1000 ease-out"
+      >
+        <div className="flex flex-col items-center justify-center">
+          <div className="w-full max-w-2xl mx-auto space-y-6 text-center">
             <div className="flex justify-center">
               <div className="w-32 h-32 rounded-full p-3">
-                <img alt="SafeChat Logo" className="w-full h-full object-contain animate-subtle-bounce" src="/lovable-uploads/b40aa161-67d2-4633-b913-fdac7ef3b172.png" />
+                <img 
+                  alt="SafeChat Logo" 
+                  className="w-full h-full object-contain animate-subtle-bounce" 
+                  src="/lovable-uploads/b40aa161-67d2-4633-b913-fdac7ef3b172.png" 
+                />
               </div>
             </div>
             
@@ -53,7 +68,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="rtl-text text-lg md:text-xl text-gray-700 max-w-3xl text-center shadow-text-light">
+            <p className="rtl-text text-lg md:text-xl text-gray-700 max-w-3xl mx-auto text-center shadow-text-light">
               זיהוי אוטומטי של בריונות והתנהגות פוגענית בקבוצות הווטסאפ של ילדיכם - בזמן אמת
             </p>
             
@@ -80,7 +95,7 @@ const Hero = () => {
                 ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               
-              <div className="bg-white/80 p-6 rounded-xl shadow-md text-right">
+              <div className="bg-white/80 p-6 rounded-xl shadow-md text-right w-full max-w-3xl mx-auto">
                 <h3 className="rtl-text text-xl font-bold mb-4 text-slate-950 text-right">הפתרון: SafeChat</h3>
                 <ul className="rtl-text space-y-3 text-gray-700 text-right">
                   <li className="flex items-center justify-end gap-2 flex-row-reverse">
@@ -113,7 +128,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default Hero;

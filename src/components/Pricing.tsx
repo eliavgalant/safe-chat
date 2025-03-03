@@ -1,11 +1,8 @@
-
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
-
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -16,30 +13,21 @@ const Pricing = () => {
     }, {
       threshold: 0.1
     });
-    
     const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
     childElements?.forEach(el => {
       observer.observe(el);
     });
-    
     return () => {
       childElements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-  
-  const features = [
-    "ללא התחייבות - בטל בכל עת",
-    "תמיכה טכנית 24/7 כלולה במחיר", 
-    "ניטור של עד 10 קבוצות ווטסאפ"
-  ];
-  
-  return (
-    <section id="pricing" ref={sectionRef} className="container-padding bg-gradient-to-b from-white to-gray-50">
+  const features = ["ללא התחייבות - בטל בכל עת", "תמיכה טכנית 24/7 כלולה במחיר", "ניטור של עד 10 קבוצות ווטסאפ"];
+  return <section id="pricing" ref={sectionRef} className="container-padding bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="animate-on-scroll heading-lg text-black mb-4 rtl-text">מחיר וחבילות</h2>
+          <h2 className="animate-on-scroll heading-lg text-black mb-4 rtl-text text-center">מחיר וחבילות</h2>
           <p className="animate-on-scroll rtl-text text-xl text-gray-600 text-center">
             תוכנית פשוטה וברורה:
           </p>
@@ -65,14 +53,12 @@ const Pricing = () => {
                 </div>
   
                 <div className="space-y-4 mb-8">
-                  {features.map((feature, index) => (
-                    <div key={index} className="flex items-center rtl-text gap-3">
+                  {features.map((feature, index) => <div key={index} className="flex items-center rtl-text gap-3">
                       <div className="flex-shrink-0 bg-safechat-gold/20 rounded-full p-1">
                         <Check className="w-4 h-4 text-safechat-gold" />
                       </div>
                       <span>{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
   
                 <CTAButton className="w-full justify-center rtl-text text-lg">
@@ -87,8 +73,6 @@ const Pricing = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;

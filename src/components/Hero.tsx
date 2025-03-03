@@ -35,7 +35,7 @@ const Hero = () => {
       <div className="absolute top-1/4 left-10 w-64 h-64 bg-safechat-gold/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-safechat-gold/10 rounded-full blur-3xl"></div>
       
-      <div ref={heroRef} className="container mx-auto px-4 z-10 opacity-0 transition-opacity duration-1000 ease-out">
+      <div ref={heroRef} className="container mx-auto z-10 opacity-0 transition-opacity duration-1000 ease-out">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           <div className="flex-1 space-y-6 text-center max-w-2xl mx-auto">
             <div className="flex justify-center">

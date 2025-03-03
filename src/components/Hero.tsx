@@ -86,7 +86,7 @@ const Hero = () => {
                 ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               
-              <div className="bg-white/80 p-6 rounded-xl shadow-md">
+              <div className="bg-white/80 p-6 rounded-xl shadow-md text-right">
                 <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4 text-right">הפתרון: SafeChat</h3>
                 <ul className="rtl-text space-y-3 text-gray-700 text-right">
                   <li className="flex items-center justify-end gap-2">

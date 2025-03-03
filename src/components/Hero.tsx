@@ -83,7 +83,7 @@ const Hero = () => {
               <div className="bg-white/80 p-6 rounded-xl shadow-md text-right">
                 <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4 text-right">הפתרון: SafeChat</h3>
                 <ul className="rtl-text space-y-3 text-gray-700 text-right">
-                  <li className="flex items-center justify-start gap-2">
+                  <li className="flex items-center justify-start gap-2 order-1">
                     <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">

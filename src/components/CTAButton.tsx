@@ -35,8 +35,8 @@ const CTAButton = ({
     <Button
       onClick={handleClick}
       className={cn(
-        "bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg",
-        size === "lg" && "text-lg py-6 px-8",
+        "bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg text-sm sm:text-base",
+        size === "lg" && "py-5 sm:py-6 px-6 sm:px-8",
         className
       )}
     >

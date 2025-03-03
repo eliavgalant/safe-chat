@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="w-full max-w-2xl mx-auto space-y-6 text-center">
             <div className="flex justify-center">
-              <div className="w-32 h-32 rounded-full p-3">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full p-3">
                 <img 
                   alt="SafeChat Logo" 
                   className="w-full h-full object-contain animate-subtle-bounce" 
@@ -61,14 +61,14 @@ const Hero = () => {
             </div>
             
             <h1 className="rtl-text heading-xl text-center">
-              <span className="gold-text">SafeChat</span>
+              <span className="gold-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl">SafeChat</span>
               <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl text-gradient shadow-text">
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gradient shadow-text">
                 שומרים על הילדים שלכם בווטסאפ
               </span>
             </h1>
             
-            <p className="rtl-text text-lg md:text-xl text-gray-700 max-w-3xl mx-auto text-center shadow-text-light">
+            <p className="rtl-text text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto text-center shadow-text-light">
               זיהוי אוטומטי של בריונות והתנהגות פוגענית בקבוצות הווטסאפ של ילדיכם - בזמן אמת
             </p>
             
@@ -78,26 +78,26 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <p className="rtl-text text-base text-amber-400 font-semibold text-center mt-2">
+            <p className="rtl-text text-sm sm:text-base text-amber-400 font-semibold text-center mt-2">
               מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
             <div className="mt-12 space-y-6 text-center pt-20 mb-12">
-              <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">
+              <h2 className="rtl-text text-xl sm:text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">
                 הילדים שלכם מוגנים?
               </h2>
               
-              <p className="rtl-text text-xl font-semibold text-gray-800 shadow-text-light text-center">
+              <p className="rtl-text text-lg sm:text-xl font-semibold text-gray-800 shadow-text-light text-center">
                 76% מההורים לא יודעים מה באמת קורה בקבוצות הווטסאפ של ילדיהם
               </p>
               
-              <p className="rtl-text text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto text-center">
+              <p className="rtl-text text-base sm:text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto text-center">
                 ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               
-              <div className="bg-white/80 p-6 rounded-xl shadow-md text-right w-full max-w-3xl mx-auto">
-                <h3 className="rtl-text text-xl font-bold mb-4 text-slate-950 text-right">הפתרון: SafeChat</h3>
-                <ul className="rtl-text space-y-3 text-gray-700 text-right">
+              <div className="bg-white/80 p-4 sm:p-6 rounded-xl shadow-md text-right w-full max-w-3xl mx-auto">
+                <h3 className="rtl-text text-lg sm:text-xl font-bold mb-4 text-slate-950 text-right">הפתרון: SafeChat</h3>
+                <ul className="rtl-text space-y-3 text-gray-700 text-right text-sm sm:text-base">
                   <li className="flex items-center justify-end gap-2 flex-row-reverse">
                     <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">

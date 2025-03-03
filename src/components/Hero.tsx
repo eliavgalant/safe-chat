@@ -57,7 +57,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <CTAButton size="lg" onClick={() => scrollToSection('pricing')}>
+              <CTAButton size="lg" target="contact">
                 התחילו להגן על ילדיכם - רק 49 ₪ לחודש
               </CTAButton>
             </div>

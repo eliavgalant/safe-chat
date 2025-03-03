@@ -75,7 +75,7 @@ const Navbar = () => {
         </nav>
 
         <Button 
-          onClick={() => scrollToSection('pricing')}
+          onClick={() => scrollToSection('contact')}
           className="hidden md:flex bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium"
         >
           התחל עכשיו
@@ -125,7 +125,7 @@ const Navbar = () => {
               שאלות נפוצות
             </button>
             <Button 
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => scrollToSection('contact')}
               className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium w-full rtl-text"
             >
               התחל עכשיו

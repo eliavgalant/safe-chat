@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
+
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -61,7 +62,7 @@ const Pricing = () => {
                     </div>)}
                 </div>
   
-                <CTAButton className="w-full justify-center rtl-text text-lg">
+                <CTAButton className="w-full justify-center rtl-text text-lg" target="contact">
                   התחילו עכשיו - רק 49 ₪ לחודש
                 </CTAButton>
               </div>
@@ -69,7 +70,7 @@ const Pricing = () => {
           </div>
           
           <p className="rtl-text text-center text-gray-500 mt-6 animate-on-scroll">
-            עדיין יש לכם שאלות? צרו קשר עם צוות התמיכה שלנו
+            עדיין יש לכם שאלות? <a href="#contact" className="text-safechat-gold hover:underline">צרו קשר עם צוות התמיכה שלנו</a>
           </p>
         </div>
       </div>

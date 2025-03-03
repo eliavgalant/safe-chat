@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Shield, MessageSquare, Bell } from 'lucide-react';
 const HowItWorks = () => {
@@ -25,7 +26,7 @@ const HowItWorks = () => {
   const steps = [{
     icon: <MessageSquare className="w-12 h-12 stroke-green-500" />,
     title: "התחברות קלה",
-    description: "התחברו לשירות באמצעות מספר הטלפון שלכם ובחרו אילו קבוצות וואטסאפ ברצונכם לנטר"
+    description: "התחברות קלה ומהירה לשירות - 5 דקות ואתם מסודרים"
   }, {
     icon: <Shield className="w-12 h-12 stroke-red-500" />,
     title: "ניטור רציף",

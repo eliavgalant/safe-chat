@@ -71,9 +71,9 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <div className="rtl-text backdrop-blur-sm p-4 rounded-lg border border-gray-100 text-gray-200 inline-block drop-shadow-xl bg-slate-950 mx-auto">
-              <span className="text-base font-semibold text-amber-400">מחיר השקה מיוחד במקום 150 ₪</span> | ללא התחייבות
-            </div>
+            <p className="rtl-text text-base text-amber-400 font-semibold shadow-text-light">
+              מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-200">| ללא התחייבות</span>
+            </p>
 
             <div className="mt-12 space-y-6 text-center">
               <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text">

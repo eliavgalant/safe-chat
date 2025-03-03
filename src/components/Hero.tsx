@@ -68,15 +68,15 @@ const Hero = () => {
             </p>
 
             <div className="mt-12 space-y-6 text-center pt-20">
-              <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text">
+              <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">
                 הילדים שלכם מוגנים?
               </h2>
               
-              <p className="rtl-text text-xl font-semibold text-gray-800 shadow-text-light">
+              <p className="rtl-text text-xl font-semibold text-gray-800 shadow-text-light text-center">
                 76% מההורים לא יודעים מה באמת קורה בקבוצות הווטסאפ של ילדיהם
               </p>
               
-              <p className="rtl-text text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto">
+              <p className="rtl-text text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto text-center">
                 ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               

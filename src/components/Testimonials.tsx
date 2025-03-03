@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -17,13 +17,27 @@ const testimonials = [
     quote: "המערכת זיהתה תוכן לא ראוי שנשלח לבן שלי בקבוצת וואטסאפ. יכולתי לדבר איתו על זה מיד ולחסוך אי נעימות בעתיד.",
     author: "יעקב מ.",
     role: "אבא לילד בן 13"
+  },
+  {
+    quote: "החלטנו לרכוש את SafeChat לאחר שהילדים שלנו קיבלו את הטלפונים הראשונים שלהם. זה עוזר לנו לפקח על הפעילות שלהם מבלי לחדור לפרטיות שלהם יותר מדי.",
+    author: "דנה ש.",
+    role: "אמא לילדים בני 11 ו-13"
+  },
+  {
+    quote: "השירות הלקוחות של SafeChat היה מעולה. הם עזרו לי להגדיר הכל בתוך דקות ספורות והמערכת עובדת בצורה מושלמת מאז.",
+    author: "אילן ב.",
+    role: "אבא לילד בן 12"
+  },
+  {
+    quote: "אנחנו מרגישים הרבה יותר בטוחים עכשיו שילדינו גולשים ברשת עם SafeChat. המערכת זיהתה וחסמה מספר אינטראקציות בעייתיות.",
+    author: "שירה כ.",
+    role: "אמא לילדים בני 9 ו-12"
   }
 ];
 
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const slideRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,25 +63,26 @@ const Testimonials = () => {
     };
   }, []);
 
-  const nextSlide = () => {
-    if (slideRef.current) {
-      slideRef.current.classList.remove('animate-fade-in');
+  const handleScroll = (direction: 'next' | 'prev') => {
+    if (sliderRef.current) {
+      sliderRef.current.classList.remove('animate-fade-in');
       setTimeout(() => {
-        setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-        if (slideRef.current) {
-          slideRef.current.classList.add('animate-fade-in');
-        }
-      }, 300);
-    }
-  };
-
-  const prevSlide = () => {
-    if (slideRef.current) {
-      slideRef.current.classList.remove('animate-fade-in');
-      setTimeout(() => {
-        setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-        if (slideRef.current) {
-          slideRef.current.classList.add('animate-fade-in');
+        if (sliderRef.current) {
+          if (direction === 'next') {
+            // Move the first 3 testimonials to the end
+            sliderRef.current.classList.add('animate-fade-in');
+            const firstThree = Array.from(sliderRef.current.children).slice(0, 3);
+            firstThree.forEach(child => {
+              sliderRef.current?.appendChild(child);
+            });
+          } else {
+            // Move the last 3 testimonials to the beginning
+            sliderRef.current.classList.add('animate-fade-in');
+            const lastThree = Array.from(sliderRef.current.children).slice(-3);
+            lastThree.reverse().forEach(child => {
+              sliderRef.current?.prepend(child);
+            });
+          }
         }
       }, 300);
     }
@@ -85,58 +100,52 @@ const Testimonials = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="animate-on-scroll heading-lg gold-text mb-4">המלצות</h2>
-          <p className="animate-on-scroll rtl-text text-xl text-gray-600">
+          <h2 className="animate-on-scroll heading-lg gold-gradient-text mb-4 shadow-text">המלצות</h2>
+          <p className="animate-on-scroll rtl-text text-xl text-gray-600 shadow-text-light">
             מה הורים אחרים אומרים על השירות שלנו
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div 
-            ref={slideRef}
-            className="animate-on-scroll glass-card p-8 md:p-12 rounded-2xl relative animate-fade-in"
-          >
-            <div className="absolute top-6 right-8 text-safechat-gold opacity-30">
-              <Quote className="w-16 h-16" />
-            </div>
-            
-            <div className="rtl-text relative z-10">
-              <p className="text-xl md:text-2xl mb-8 font-medium italic">
-                {testimonials[activeIndex].quote}
-              </p>
-              
-              <div className="flex items-center justify-end">
-                <div>
-                  <p className="font-bold text-lg">{testimonials[activeIndex].author}</p>
-                  <p className="text-gray-500">{testimonials[activeIndex].role}</p>
+        <div className="max-w-6xl mx-auto">
+          <div ref={sliderRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="animate-on-scroll glass-card p-6 rounded-2xl relative h-full flex flex-col"
+              >
+                <div className="absolute top-4 right-4 text-safechat-gold opacity-30">
+                  <Quote className="w-8 h-8" />
+                </div>
+                
+                <div className="rtl-text relative z-10 flex-1 flex flex-col">
+                  <p className="text-base lg:text-lg mb-4 font-medium italic flex-1">
+                    {testimonial.quote}
+                  </p>
+                  
+                  <div className="flex items-center justify-end mt-auto">
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
           
           <div className="flex justify-center mt-8 gap-4">
             <button 
-              onClick={prevSlide}
+              onClick={() => handleScroll('prev')}
               className="p-2 rounded-full bg-white shadow-md hover:bg-safechat-gold hover:text-white transition-colors"
+              aria-label="Previous testimonials"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
             
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button 
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === activeIndex ? 'bg-safechat-gold' : 'bg-gray-300'
-                  }`}
-                  onClick={() => setActiveIndex(index)}
-                />
-              ))}
-            </div>
-            
             <button 
-              onClick={nextSlide}
+              onClick={() => handleScroll('next')}
               className="p-2 rounded-full bg-white shadow-md hover:bg-safechat-gold hover:text-white transition-colors"
+              aria-label="Next testimonials"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>

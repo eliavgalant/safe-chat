@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
 import { MessageCircle } from 'lucide-react';
+
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -11,15 +13,18 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
+
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -28,7 +33,8 @@ const Hero = () => {
       });
     }
   };
-  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+
+  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
       
@@ -67,7 +73,7 @@ const Hero = () => {
               מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
-            <div className="mt-12 space-y-6 text-center pt-20">
+            <div className="mt-12 space-y-6 text-center pt-20 mb-12">
               <h2 className="rtl-text text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">
                 הילדים שלכם מוגנים?
               </h2>
@@ -81,8 +87,8 @@ const Hero = () => {
               </p>
               
               <div className="bg-white/80 p-6 rounded-xl shadow-md">
-                <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4">הפתרון: SafeChat</h3>
-                <ul className="rtl-text space-y-3 text-gray-700">
+                <h3 className="rtl-text text-xl font-bold text-safechat-gold mb-4 text-right">הפתרון: SafeChat</h3>
+                <ul className="rtl-text space-y-3 text-gray-700 text-right">
                   <li className="flex items-center justify-end gap-2">
                     <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
                     <div className="bg-safechat-gold/20 p-1 rounded-full">
@@ -115,4 +121,5 @@ const Hero = () => {
       </div>
     </div>;
 };
+
 export default Hero;

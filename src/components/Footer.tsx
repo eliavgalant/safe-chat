@@ -1,11 +1,7 @@
-
 import { Shield } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-safechat-dark text-white">
+  return <footer className="bg-safechat-dark text-white">
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -75,7 +71,7 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-4">
-            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
+            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors hidden">
               תנאי שימוש
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
@@ -84,8 +80,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

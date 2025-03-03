@@ -1,11 +1,8 @@
-
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
 import { MessageCircle } from 'lucide-react';
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -14,18 +11,15 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
-    
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
-    
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
-  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -34,7 +28,6 @@ const Hero = () => {
       });
     }
   };
-  
   return <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-0"></div>
@@ -48,16 +41,12 @@ const Hero = () => {
           <div className="flex-1 space-y-6 text-center lg:text-right max-w-2xl mx-auto lg:mx-0">
             <div className="flex justify-center lg:justify-end">
               <div className="w-32 h-32 rounded-full p-3">
-                <img 
-                  src="/lovable-uploads/b7d8cec6-7ff6-42e6-ab23-fe889af2264a.png" 
-                  alt="SafeChat Logo" 
-                  className="w-full h-full object-contain animate-subtle-bounce"
-                />
+                <img src="/lovable-uploads/b7d8cec6-7ff6-42e6-ab23-fe889af2264a.png" alt="SafeChat Logo" className="w-full h-full object-contain animate-subtle-bounce" />
               </div>
             </div>
             
             <h1 className="rtl-text heading-xl text-center">
-              <span className="gold-gradient-text">SafeChat</span>
+              <span className="gold-gradient-text drop-shadow-md\n">SafeChat</span>
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl text-gradient shadow-text">
                 שומרים על הילדים שלכם ב-WhatsApp
@@ -96,5 +85,4 @@ const Hero = () => {
       </div>
     </div>;
 };
-
 export default Hero;

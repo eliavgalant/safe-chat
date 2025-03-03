@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,7 +11,6 @@ const Contact = () => {
     notes: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -23,7 +21,6 @@ const Contact = () => {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -61,14 +58,11 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
   return <section id="contact" className="bg-safechat-dark-light text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="heading-lg rtl-text mb-4 text-center">צור קשר</h2>
-          <p className="rtl-text text-lg text-gray-300 max-w-2xl mx-auto text-center">
-            יש לכם שאלות? רוצים לדעת עוד על איך SafeChat יכול לעזור לכם? מלאו את הטופס ונחזור אליכם בהקדם
-          </p>
+          <p className="rtl-text text-lg text-gray-300 max-w-2xl mx-auto text-center">להרשמה מיידית ללא התחייבת מלאו את הפרטים</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -105,5 +99,4 @@ const Contact = () => {
       </div>
     </section>;
 };
-
 export default Contact;

@@ -1,8 +1,9 @@
-
 import { Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
   return <footer className="bg-safechat-dark text-white">
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -55,11 +56,6 @@ const Footer = () => {
               <li className="text-gray-300">
                 טלפון: 0503218785
               </li>
-              <li className="mt-4">
-                <a href="#contact" className="text-white bg-safechat-gold/20 hover:bg-safechat-gold/30 px-4 py-2 rounded-md transition-colors inline-block">
-                  צרו קשר
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -78,4 +74,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;

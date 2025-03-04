@@ -72,7 +72,7 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-4">
-            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors hidden">
+            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
               תנאי שימוש
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">

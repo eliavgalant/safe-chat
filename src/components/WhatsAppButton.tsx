@@ -1,5 +1,5 @@
 
-import { WhatsApp } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const phoneNumber = "972503218785"; // Israeli format without leading 0, with country code
@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
       className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
       aria-label="פתיחת צ'אט בוואטסאפ"
     >
-      <WhatsApp size={24} className="animate-subtle-bounce" />
+      <MessageCircle size={24} className="animate-subtle-bounce" />
     </button>
   );
 };

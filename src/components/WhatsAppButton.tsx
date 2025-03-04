@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const phoneNumber = "972503218785"; // Israeli format without leading 0, with country code
-  const message = "היי, אשמח לשמוע פרטים נוספים על SafeChat";
+  const message = "היי! שמעתי על SafeChat ורוצה להבין איך הוא יכול לעזור לשמור על הילדים שלי בצ'אטים. אפשר לקבל פרטים?";
   
   const handleClick = () => {
     const encodedMessage = encodeURIComponent(message);

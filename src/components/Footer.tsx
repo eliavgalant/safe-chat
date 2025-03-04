@@ -1,5 +1,7 @@
 
 import { Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-safechat-dark text-white">
@@ -72,9 +74,9 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-4">
-            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
+            <Link to="/terms" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
               תנאי שימוש
-            </a>
+            </Link>
             <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
               מדיניות פרטיות
             </a>

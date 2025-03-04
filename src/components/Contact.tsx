@@ -9,8 +9,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     parentPhone: '',
-    childPhone: '',
-    notes: ''
+    childPhone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,8 +42,7 @@ const Contact = () => {
         setFormData({
           name: '',
           parentPhone: '',
-          childPhone: '',
-          notes: ''
+          childPhone: ''
         });
       } else {
         throw new Error('Network response was not ok');
@@ -82,14 +80,9 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="space-y-2 mb-6">
+            <div className="space-y-2 mb-8">
               <Label htmlFor="childPhone" className="rtl-text text-white block">טלפון של הילד</Label>
               <Input id="childPhone" name="childPhone" type="tel" value={formData.childPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של הילד" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
-            </div>
-            
-            <div className="space-y-2 mb-8">
-              <Label htmlFor="notes" className="rtl-text text-white block">הערות</Label>
-              <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} placeholder="כתוב את ההערות שלך כאן" className="rtl-text w-full h-24 sm:h-32 bg-black/20 border border-gray-700 rounded-md px-3 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold transition-all duration-200" />
             </div>
             
             <div className="text-center">

@@ -1,3 +1,4 @@
+
 import { Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
@@ -51,7 +52,6 @@ const Footer = () => {
           <div>
             <h3 className="rtl-text font-bold text-lg mb-4 text-safechat-gold">צרו קשר</h3>
             <ul className="rtl-text space-y-2">
-              <li className="text-gray-300">ק'ר'ר'ק</li>
               <li className="text-gray-300">
                 טלפון: 0503218785
               </li>

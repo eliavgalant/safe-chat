@@ -77,9 +77,6 @@ const Footer = () => {
             <Link to="/terms" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
               תנאי שימוש
             </Link>
-            <a href="#" className="text-sm text-gray-400 hover:text-safechat-gold transition-colors">
-              מדיניות פרטיות
-            </a>
           </div>
         </div>
       </div>

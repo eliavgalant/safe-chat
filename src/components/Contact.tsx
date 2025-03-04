@@ -26,13 +26,21 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const webhookUrl = "https://safechat.free.beeceptor.com";
+      const webhookUrl = "https://hook.eu2.make.com/dc67buci793zutacrfiu8caht4ftu6s4";
+      
+      // Transform the data to match the required format
+      const formattedData = {
+        firstName: formData.name,
+        phone: formData.parentPhone,
+        childPhone: formData.childPhone
+      };
+      
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formattedData)
       });
       if (response.ok) {
         toast({

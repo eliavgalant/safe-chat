@@ -43,13 +43,13 @@ const Index = () => {
       <HowItWorks />
       
       {/* First CTA Section */}
-      <section className="py-16 bg-black text-white">
+      <section className="py-16 bg-safechat-dark-lighter text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
-            הגנו על הילדים שלכם בקבוצות וואטסאפ כבר היום
+            הגנה על ילדים בקבוצות וואטסאפ - בקלות ובמהירות
           </h2>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            התחילו עכשיו
+            למידע נוסף
           </CTAButton>
         </div>
       </section>
@@ -57,13 +57,13 @@ const Index = () => {
       <Benefits />
       
       {/* Second CTA Section */}
-      <section className="py-16 bg-safechat-dark-light text-white">
+      <section className="py-16 bg-gray-100 text-safechat-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
-            צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
+            סביבה בטוחה לילדים ברשת - בפשטות ובנוחות
           </h2>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            להתחלת השימוש
+            גלו עוד
           </CTAButton>
         </div>
       </section>
@@ -72,16 +72,16 @@ const Index = () => {
       <Testimonials />
       
       {/* Third CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-light text-white">
+      <section className="py-16 bg-gradient-to-r from-slate-200 to-slate-300 text-safechat-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
-            אל תחכו עד שיהיה מאוחר מדי - הגנו על ילדיכם ברשת כבר עכשיו
+            הגנה פשוטה ויעילה על ילדיכם ברשת
           </h2>
           <p className="rtl-text text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
+            התחילו להשתמש במערכת תוך מספר דקות וקבלו תמיכה מקצועית לאורך כל הדרך
           </p>
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
-            הצטרפו עכשיו
+            צרו קשר
           </CTAButton>
         </div>
       </section>

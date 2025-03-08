@@ -1,24 +1,62 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-const faqs = [{
-  question: "האם הילדים יודעים שאני מנטר את השיחות שלהם?",
-  answer: "לא, השירות פועל באופן דיסקרטי לחלוטין והילדים לא מודעים לניטור. אנו ממליצים, עם זאת, לקיים שיחה פתוחה עם הילדים על בטיחות ברשת."
-}, {
-  question: "האם פרטיות המידע שלנו מוגנת?",
-  answer: "כן, אנו מקפידים על אבטחת מידע ברמה הגבוהה ביותר. המידע שלכם מוצפן ואיננו משתפים אותו עם צדדים שלישיים בשום מקרה."
-}, {
-  question: "כיצד מזהה המערכת תוכן בעייתי?",
-  answer: "המערכת משתמשת בבינה מלאכותית מתקדמת שהוכשרה לזהות תוכן פוגעני, בריונות, איומים ותכנים לא ראויים. המערכת לומדת ומשתפרת כל הזמן."
-}, {
-  question: "מה קורה אם יש התראת שווא?",
-  answer: "המערכת שלנו מדויקת מאוד, אך ייתכנו התראות שווא. במקרה כזה, תוכלו לסמן את ההתראה כשגויה והמערכת תלמד מכך לשיפור בעתיד."
-}, {
-  question: "האם ניתן לנטר מספר טלפונים במקביל?",
-  answer: "כן, ניתן להוסיף מספר טלפונים לחשבון אחד בתשלום נוסף. פנו אלינו לקבלת מידע על חבילות משפחתיות."
-}];
+
+const faqs = [
+  {
+    question: "האם SafeChat קורא את כל ההודעות של הילד שלי?",
+    answer: "לא, SafeChat סורק רק את קבוצות הווטסאפ שבחרת לנטר, ומתריע רק במקרה של תוכן בעייתי. אנחנו לא שומרים או חושפים הודעות רגילות."
+  },
+  {
+    question: "האם המידע שלי נשאר פרטי?",
+    answer: "לחלוטין! SafeChat לא משתף מידע עם אף גורם חיצוני, וכל הנתונים מוצפנים ומאובטחים."
+  },
+  {
+    question: "האם אפשר לבחור אילו קבוצות לנטר?",
+    answer: "כן! אתה מחליט אילו קבוצות הווטסאפ של הילד ינוטרו, וניתן לעדכן את הבחירה בכל רגע."
+  },
+  {
+    question: "איך מתקינים את SafeChat?",
+    answer: "פשוט וקל – תהליך ההתקנה לוקח 5 דקות בלבד וללא צורך באפליקציות נוספות."
+  },
+  {
+    question: "האם אפשר לנטר כמה ילדים בחשבון אחד?",
+    answer: "כן! אפשר לנטר מספר טלפונים של ילדים תחת אותו חשבון הורה."
+  },
+  {
+    question: "איך SafeChat מזהה הודעות בעייתיות?",
+    answer: "המערכת משתמשת בבינה מלאכותית מתקדמת שמזהה בריונות, איומים, תוכן לא הולם ועוד."
+  },
+  {
+    question: "מה אם המערכת תשלח התראה לא נכונה?",
+    answer: "אם קיבלת התראה שגויה, תוכל לדווח עליה דרך הממשק, והמערכת תלמד ותשתפר בהתאם."
+  },
+  {
+    question: "האם SafeChat מבין גם סלנג, קיצורים ואמוג'ים?",
+    answer: "בהחלט! הבינה המלאכותית שלנו מתעדכנת כל הזמן כדי להבין שפה מדוברת, סלנג ואפילו אמוג'ים עם משמעות בעייתית."
+  },
+  {
+    question: "האם יש התחייבות לטווח ארוך?",
+    answer: "לא, ניתן לבטל את המנוי בכל רגע ללא התחייבות."
+  },
+  {
+    question: "מה קורה אם אני נתקל בבעיה טכנית?",
+    answer: "צוות התמיכה שלנו זמין 24/7 לעזור לך בכל שאלה."
+  },
+  {
+    question: "מה אם אני לא מרוצה מהשירות?",
+    answer: "ניתן לבטל בכל עת, אבל אנחנו בטוחים שתהיה מרוצה!"
+  },
+  {
+    question: "האם SafeChat מתאים גם להורים שאינם מבינים בטכנולוגיה?",
+    answer: "כן! ההתקנה קלה במיוחד, ואין צורך בידע טכני."
+  }
+];
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -29,19 +67,23 @@ const FAQ = () => {
     }, {
       threshold: 0.1
     });
+
     const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
     childElements?.forEach(el => {
       observer.observe(el);
     });
+
     return () => {
       childElements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
+
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
   return <section id="faq" ref={sectionRef} className="container-padding bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -69,4 +111,5 @@ const FAQ = () => {
       </div>
     </section>;
 };
+
 export default FAQ;

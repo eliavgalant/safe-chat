@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -10,7 +9,6 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import SectionDivider from '@/components/SectionDivider';
 
 const Index = () => {
   // Enable scroll animations
@@ -38,30 +36,13 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen overflow-x-hidden">
+  return <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      
-      {/* Hero section */}
-      <section className="bg-safechat-dark">
-        <Hero />
-      </section>
-      
-      {/* Section divider: Hero to How It Works */}
-      <SectionDivider 
-        fromColor="from-safechat-dark" 
-        toColor="to-gray-100" 
-        pattern="wave" 
-      />
-      
-      {/* How It Works section */}
-      <section className="bg-gray-100">
-        <HowItWorks />
-      </section>
+      <Hero />
+      <HowItWorks />
       
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-lighter text-white">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             הגנו על הילדים שלכם בקבוצות וואטסאפ כבר היום
@@ -72,69 +53,13 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Section divider: CTA to Benefits */}
-      <SectionDivider 
-        fromColor="from-safechat-dark-lighter" 
-        toColor="to-gray-50" 
-        pattern="slant"
-      />
-      
-      {/* Benefits section */}
-      <section className="bg-gray-50">
-        <Benefits />
-      </section>
-      
-      {/* Section divider: Benefits to Pricing */}
-      <SectionDivider 
-        fromColor="from-gray-50" 
-        toColor="to-white" 
-        pattern="curve"
-      />
-      
-      {/* Pricing section */}
-      <section className="bg-white">
-        <Pricing />
-      </section>
-      
-      {/* Section divider: Pricing to Testimonials */}
-      <SectionDivider 
-        fromColor="from-white" 
-        toColor="to-gray-100" 
-        pattern="triangle"
-      />
-      
-      {/* Testimonials section */}
-      <section className="bg-gray-100">
-        <Testimonials />
-      </section>
-      
-      {/* Section divider: Testimonials to FAQ */}
-      <SectionDivider 
-        fromColor="from-gray-100" 
-        toColor="to-white" 
-        pattern="wave"
-      />
-      
-      {/* FAQ Section */}
-      <section className="bg-white">
-        <FAQ />
-      </section>
-      
-      {/* Section divider: FAQ to Contact */}
-      <SectionDivider 
-        fromColor="from-white" 
-        toColor="to-gray-50" 
-        pattern="slant"
-      />
-      
-      {/* Contact Section */}
-      <section className="bg-gray-50">
-        <Contact />
-      </section>
-      
+      <Benefits />
+      <Pricing />
+      <Testimonials />
+      <FAQ />
+      <Contact />
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
 export default Index;

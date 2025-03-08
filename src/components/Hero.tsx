@@ -92,7 +92,8 @@ const Hero = () => {
               </p>
               
               <p className="rtl-text text-base sm:text-lg text-gray-700 shadow-text-light max-w-3xl mx-auto text-center">
-                ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם. סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
+                ילדיכם מעבירים שעות בקבוצות ווטסאפ מחוץ להשגחתכם.<br />
+                סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               
               <div className="bg-white/80 p-4 sm:p-6 rounded-xl shadow-md text-right w-full max-w-3xl mx-auto">

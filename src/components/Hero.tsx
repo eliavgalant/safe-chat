@@ -96,32 +96,32 @@ const Hero = () => {
                 סקרים מראים ש-1 מכל 3 ילדים נחשף לבריונות ברשת, ורובם אינם מספרים להוריהם על כך.
               </p>
               
-              <div className="bg-white/80 p-4 sm:p-6 rounded-xl shadow-md text-right w-full max-w-3xl mx-auto">
-                <h3 className="rtl-text text-lg sm:text-xl font-bold mb-4 text-slate-950 text-right">הפתרון: SafeChat</h3>
-                <ul className="rtl-text space-y-3 text-gray-700 text-right text-sm sm:text-base">
-                  <li className="flex items-center justify-end gap-2 flex-row-reverse">
-                    <span>מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
-                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+              <div className="bg-gradient-to-b from-white to-gray-50 p-6 sm:p-8 rounded-2xl shadow-lg text-center w-full max-w-3xl mx-auto border border-gray-100">
+                <h3 className="rtl-text text-lg sm:text-xl font-bold mb-6 text-safechat-dark text-center bg-safechat-gold/10 py-2 rounded-lg">הפתרון: SafeChat</h3>
+                <ul className="rtl-text space-y-4 text-gray-700 text-center grid grid-cols-1 gap-4">
+                  <li className="flex items-center justify-center gap-3">
+                    <div className="bg-safechat-gold/20 p-1.5 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
+                    <span className="font-medium">מנטר באופן אוטומטי את תוכן ההודעות בקבוצות</span>
                   </li>
-                  <li className="flex items-center justify-end gap-2 flex-row-reverse">
-                    <span>מזהה תכנים פוגעניים באמצעות בינה מלאכותית מתקדמת</span>
-                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+                  <li className="flex items-center justify-center gap-3">
+                    <div className="bg-safechat-gold/20 p-1.5 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-safechat-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
+                    <span className="font-medium">מזהה תכנים פוגעניים באמצעות בינה מלאכותית מתקדמת</span>
                   </li>
-                  <li className="flex items-center justify-end gap-2 flex-row-reverse">
-                    <span>שולח התראות להורים בזמן אמת כשמזוהה הודעה בעייתית</span>
-                    <div className="bg-safechat-gold/20 p-1 rounded-full">
+                  <li className="flex items-center justify-center gap-3">
+                    <div className="bg-safechat-gold/20 p-1.5 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-safechat-gold">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
+                    <span className="font-medium">שולח התראות להורים בזמן אמת כשמזוהה הודעה בעייתית</span>
                   </li>
                 </ul>
               </div>

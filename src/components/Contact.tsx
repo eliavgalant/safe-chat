@@ -1,10 +1,8 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,14 +25,13 @@ const Contact = () => {
     setIsSubmitting(true);
     try {
       const webhookUrl = "https://hook.eu2.make.com/dc67buci793zutacrfiu8caht4ftu6s4";
-      
+
       // Transform the data to match the required format
       const formattedData = {
         firstName: formData.name,
         phone: formData.parentPhone,
         childPhone: formData.childPhone
       };
-      
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
@@ -66,12 +63,11 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
   return <section id="contact" className="bg-safechat-dark-light text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="heading-lg rtl-text mb-4 text-center">צור קשר</h2>
-          <p className="rtl-text text-lg text-gray-300 max-w-2xl mx-auto text-center">להרשמה מיידית ללא התחייבת מלאו את הפרטים</p>
+          <p className="rtl-text text-lg text-gray-300 max-w-2xl mx-auto text-center">לשאלות נוספות או להרשמה</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -103,5 +99,4 @@ const Contact = () => {
       </div>
     </section>;
 };
-
 export default Contact;

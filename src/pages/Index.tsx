@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -12,7 +11,6 @@ import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 
 const Index = () => {
-  // Enable scroll animations
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll('.animate-on-scroll');
@@ -31,7 +29,6 @@ const Index = () => {
       });
     };
     window.addEventListener('scroll', handleScroll);
-    // Initial check
     setTimeout(handleScroll, 500);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -75,7 +72,7 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-light text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
-            אל תחכו עד שיהיה מאוחר מדי - הגנו על ילדיכם ברשת כבר עכשיו
+            הגנו על ילדיכם ברשת כבר עכשיו
           </h2>
           <p className="rtl-text text-xl mb-8 max-w-2xl mx-auto opacity-90">
             תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים

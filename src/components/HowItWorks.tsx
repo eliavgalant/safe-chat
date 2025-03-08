@@ -1,8 +1,10 @@
 
 import { useEffect, useRef } from 'react';
 import { Shield, MessageSquare, Bell } from 'lucide-react';
+
 const HowItWorks = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -13,16 +15,19 @@ const HowItWorks = () => {
     }, {
       threshold: 0.1
     });
+    
     const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
     childElements?.forEach(el => {
       observer.observe(el);
     });
+    
     return () => {
       childElements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
+  
   const steps = [{
     icon: <MessageSquare className="w-12 h-12 stroke-green-500" />,
     title: "התחברות קלה",
@@ -36,7 +41,8 @@ const HowItWorks = () => {
     title: "התראות בזמן אמת",
     description: "קבלו התראות מיידיות כאשר מזוהה התנהגות חשודה או תוכן לא ראוי"
   }];
-  return <section id="how-it-works" ref={sectionRef} className="container-padding">
+  
+  return <section id="how-it-works" ref={sectionRef} className="container-padding bg-gray-100">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="animate-on-scroll heading-lg text-black mb-4 ">איך זה עובד?</h2>
@@ -59,4 +65,5 @@ const HowItWorks = () => {
       </div>
     </section>;
 };
+
 export default HowItWorks;

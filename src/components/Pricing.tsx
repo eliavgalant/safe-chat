@@ -25,7 +25,7 @@ const Pricing = () => {
       });
     };
   }, []);
-  const features = ["ללא התחייבות - בטל בכל עת", "תמיכה טכנית 24/7 כלולה במחיר", "ניטור של עד 10 קבוצות ווטסאפ"];
+  const features = ["ללא התחייבות - בטל בכל עת", "תמיכה טכנית 24/7 כלולה במחיר"];
   return <section id="pricing" ref={sectionRef} className="container-padding bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">

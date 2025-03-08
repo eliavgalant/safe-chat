@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -41,7 +42,7 @@ const Index = () => {
       <Hero />
       <HowItWorks />
       
-      {/* CTA Section */}
+      {/* First CTA Section */}
       <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
@@ -54,8 +55,37 @@ const Index = () => {
       </section>
       
       <Benefits />
+      
+      {/* Second CTA Section */}
+      <section className="py-16 bg-safechat-dark-light text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
+            צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
+          </h2>
+          <CTAButton className="mx-auto rtl-text text-lg" target="contact">
+            להתחלת השימוש
+          </CTAButton>
+        </div>
+      </section>
+      
       <Pricing />
       <Testimonials />
+      
+      {/* Third CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-light text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
+            אל תחכו עד שיהיה מאוחר מדי - הגנו על ילדיכם ברשת כבר עכשיו
+          </h2>
+          <p className="rtl-text text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
+          </p>
+          <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
+            הצטרפו עכשיו
+          </CTAButton>
+        </div>
+      </section>
+      
       <FAQ />
       <Contact />
       <Footer />

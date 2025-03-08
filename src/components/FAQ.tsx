@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const faqs = [
   },
   {
     question: "האם אפשר לבחור אילו קבוצות לנטר?",
-    answer: "כן! אתה מחליט אילו קבוצות הווטסאפ של הילד ינוטרו, וניתן לעדכן את הבחירה בכל רגע."
+    answer: "כן! אתם מחליטים אילו קבוצות הווטסאפ של הילד ינוטרו, וניתן לעדכן את הבחירה בכל רגע."
   },
   {
     question: "איך מתקינים את SafeChat?",

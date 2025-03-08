@@ -40,7 +40,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       <HowItWorks />
-      <Benefits />
       
       {/* CTA Section */}
       <section className="py-16 bg-black text-white">
@@ -54,6 +53,7 @@ const Index = () => {
         </div>
       </section>
       
+      <Benefits />
       <Pricing />
       <Testimonials />
       <FAQ />

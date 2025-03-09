@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -42,10 +41,6 @@ const faqs = [
   {
     question: "מה קורה אם אני נתקל בבעיה טכנית?",
     answer: "צוות התמיכה שלנו זמין 24/7 ומוכן לסייע בכל שאלה או תקלה."
-  },
-  {
-    question: "מה אם אני לא מרוצה מהשירות?",
-    answer: "ניתן לבטל את השירות בכל עת, אך רוב ההורים מוצאים בו פתרון יעיל להגנה על ילדיהם."
   },
   {
     question: "האם SafeChat מתאים גם להורים שאינם מבינים בטכנולוגיה?",

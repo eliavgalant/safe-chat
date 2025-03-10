@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface CountdownTimerProps {
@@ -53,7 +52,7 @@ const CountdownTimer = ({ hours, onComplete }: CountdownTimerProps) => {
 
   return (
     <div className="mx-auto my-8 p-6 rounded-2xl bg-gradient-to-br from-amber-50 via-amber-100 to-amber-50 border border-amber-200 shadow-lg max-w-md text-center">
-      <p className="rtl-text text-base font-semibold text-amber-900 mb-4">
+      <p className="rtl-text text-base font-semibold text-amber-900 mb-4 flex justify-center items-center">
         מבצע השקה מיוחד - ייגמר בקרוב!
       </p>
       <div className="flex justify-center gap-4 sm:gap-6 text-center mb-4">

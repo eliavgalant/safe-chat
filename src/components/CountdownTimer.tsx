@@ -52,31 +52,33 @@ const CountdownTimer = ({ hours, onComplete }: CountdownTimerProps) => {
   };
 
   return (
-    <div className="mx-auto my-4 p-3 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 shadow-sm max-w-md">
-      <p className="rtl-text text-sm font-medium text-amber-900 mb-2">מבצע השקה מיוחד - ייגמר בקרוב:</p>
-      <div className="flex justify-center gap-2 sm:gap-4 text-center">
+    <div className="mx-auto my-8 p-6 rounded-2xl bg-gradient-to-br from-amber-50 via-amber-100 to-amber-50 border border-amber-200 shadow-lg max-w-md text-center">
+      <p className="rtl-text text-base font-semibold text-amber-900 mb-4">
+        מבצע השקה מיוחד - ייגמר בקרוב!
+      </p>
+      <div className="flex justify-center gap-4 sm:gap-6 text-center mb-4">
         <div className="flex flex-col items-center">
-          <div className="bg-amber-500 text-white rounded-md px-3 py-2 w-14 h-14 flex items-center justify-center text-xl sm:text-2xl font-bold shadow-inner">
+          <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-xl px-4 py-3 w-16 h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold shadow-inner">
             {formatNumber(timeLeft.hours)}
           </div>
-          <span className="text-xs mt-1 text-amber-800">שעות</span>
+          <span className="text-sm mt-2 text-amber-800 font-medium">שעות</span>
         </div>
-        <div className="text-amber-500 text-xl sm:text-2xl font-bold flex items-center">:</div>
+        <div className="text-amber-500 text-2xl sm:text-3xl font-bold flex items-center">:</div>
         <div className="flex flex-col items-center">
-          <div className="bg-amber-500 text-white rounded-md px-3 py-2 w-14 h-14 flex items-center justify-center text-xl sm:text-2xl font-bold shadow-inner">
+          <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-xl px-4 py-3 w-16 h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold shadow-inner">
             {formatNumber(timeLeft.minutes)}
           </div>
-          <span className="text-xs mt-1 text-amber-800">דקות</span>
+          <span className="text-sm mt-2 text-amber-800 font-medium">דקות</span>
         </div>
-        <div className="text-amber-500 text-xl sm:text-2xl font-bold flex items-center">:</div>
+        <div className="text-amber-500 text-2xl sm:text-3xl font-bold flex items-center">:</div>
         <div className="flex flex-col items-center">
-          <div className="bg-amber-500 text-white rounded-md px-3 py-2 w-14 h-14 flex items-center justify-center text-xl sm:text-2xl font-bold shadow-inner">
+          <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-xl px-4 py-3 w-16 h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold shadow-inner">
             {formatNumber(timeLeft.seconds)}
           </div>
-          <span className="text-xs mt-1 text-amber-800">שניות</span>
+          <span className="text-sm mt-2 text-amber-800 font-medium">שניות</span>
         </div>
       </div>
-      <p className="rtl-text text-xs font-medium text-amber-900 mt-2 text-center">
+      <p className="rtl-text text-sm font-medium text-amber-900 mt-2 text-center">
         השאירו פרטים עכשיו וקבלו מחיר השקה מיוחד!
       </p>
     </div>

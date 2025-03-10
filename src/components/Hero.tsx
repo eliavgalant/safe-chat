@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import CTAButton from './CTAButton';
-import CountdownTimer from './CountdownTimer';
+import { MessageCircle } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -82,9 +82,6 @@ const Hero = () => {
               מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
-            {/* Countdown Timer */}
-            <CountdownTimer hours={48} />
-            
             <div className="mt-12 space-y-6 text-center pt-20 mb-12">
               <h2 className="rtl-text text-xl sm:text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">
                 הילדים שלכם מוגנים?

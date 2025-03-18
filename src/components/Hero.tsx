@@ -78,11 +78,7 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <div className="mx-auto">
-              <p className="rtl-text text-base sm:text-lg font-bold text-gray-400 text-center">
-                ואז רק 49₪ לחודש | ניתן לבטל בכל עת
-              </p>
-            </div>
+            {/* Removed the pricing text */}
 
             <div className="mt-12 space-y-6 text-center pt-20 mb-12">
               <h2 className="rtl-text text-xl sm:text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">

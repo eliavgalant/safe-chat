@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Shield, MessageSquare, Bell } from 'lucide-react';
 
@@ -54,7 +53,7 @@ const HowItWorks = () => {
             איך זה עובד?
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-safechat-gold rounded-full"></span>
           </h2>
-          <p className="animate-on-scroll rtl-text text-xl text-gray-600 mt-8">
+          <p className="animate-on-scroll rtl-text text-xl text-gray-600 mt-8 text-center">
             שלושה צעדים פשוטים להתחלת השימוש ב-SafeChat והגנה על ילדיכם
           </p>
         </div>
@@ -79,7 +78,6 @@ const HowItWorks = () => {
               
               <p className="rtl-text text-gray-600 relative z-10">{step.description}</p>
               
-              {/* Subtle animated decorative element */}
               <div className="absolute -bottom-2 -right-2 w-20 h-20 rounded-full bg-gradient-to-r from-safechat-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}

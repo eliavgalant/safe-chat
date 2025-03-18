@@ -1,15 +1,19 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     parentPhone: '',
     childPhone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -20,6 +24,7 @@ const Contact = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -29,6 +34,7 @@ const Contact = () => {
       // Transform the data to match the required format
       const formattedData = {
         firstName: formData.name,
+        email: formData.email,
         phone: formData.parentPhone,
         childPhone: formData.childPhone
       };
@@ -46,6 +52,7 @@ const Contact = () => {
         });
         setFormData({
           name: '',
+          email: '',
           parentPhone: '',
           childPhone: ''
         });
@@ -63,6 +70,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
   return <section id="contact" className="bg-safechat-dark-light text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -79,14 +87,30 @@ const Contact = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="parentPhone" className="rtl-text text-white block">טלפון של ההורה</Label>
-                <Input id="parentPhone" name="parentPhone" type="tel" value={formData.parentPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של ההורה" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+                <Label htmlFor="email" className="rtl-text text-white block">כתובת מייל</Label>
+                <Input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  placeholder="הכנס את כתובת המייל שלך" 
+                  className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" 
+                  required 
+                />
               </div>
             </div>
             
-            <div className="space-y-2 mb-8">
-              <Label htmlFor="childPhone" className="rtl-text text-white block">טלפון של הילד</Label>
-              <Input id="childPhone" name="childPhone" type="tel" value={formData.childPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של הילד" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
+              <div className="space-y-2">
+                <Label htmlFor="parentPhone" className="rtl-text text-white block">טלפון של ההורה</Label>
+                <Input id="parentPhone" name="parentPhone" type="tel" value={formData.parentPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של ההורה" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="childPhone" className="rtl-text text-white block">טלפון של הילד</Label>
+                <Input id="childPhone" name="childPhone" type="tel" value={formData.childPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של הילד" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+              </div>
             </div>
             
             <div className="text-center">
@@ -99,4 +123,5 @@ const Contact = () => {
       </div>
     </section>;
 };
+
 export default Contact;

@@ -78,9 +78,12 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <div className="animate-pulse bg-safechat-gold/20 border-2 border-safechat-gold rounded-lg px-4 py-3 max-w-md mx-auto">
-              <p className="rtl-text text-base sm:text-lg font-bold text-safechat-dark text-center">
-                ✨ ואז רק 49 ש"ח לחודש ✨
+            <div className="mx-auto">
+              <p className="rtl-text text-base sm:text-lg font-bold text-gray-500 text-center">
+                שבועיים התנסות חינם! ללא התחייבות
+              </p>
+              <p className="rtl-text text-base sm:text-lg font-bold text-gray-400 text-center">
+                ואז רק 49₪ לחודש
               </p>
             </div>
 

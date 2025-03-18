@@ -29,7 +29,14 @@ const Pricing = () => {
     };
   }, []);
   
-  const features = ["תמיכה טכנית 24/7 כלולה במחיר", "זיהוי אוטומטי של תוכן פוגעני", "התראות בזמן אמת", "ממשק ניהול ידידותי"];
+  const features = [
+    "תמיכה טכנית 24/7 כלולה במחיר", 
+    "זיהוי אוטומטי של תוכן פוגעני", 
+    "התראות בזמן אמת", 
+    "ממשק ניהול ידידותי",
+    "אנליטיקס ודוחות חודשיים",
+    "הגנה מתקדמת בכל קבוצות הווטסאפ"
+  ];
   
   return (
     <section id="pricing" ref={sectionRef} className="container-padding bg-gradient-to-b from-white to-gray-50 py-24 relative overflow-hidden">
@@ -53,9 +60,9 @@ const Pricing = () => {
         <div className="max-w-md mx-auto relative">
           {/* Price card */}
           <div className="animate-on-scroll relative mt-14">
-            {/* Floating badge */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-safechat-gold to-safechat-gold-light text-safechat-dark font-bold px-8 py-3 rounded-full z-10 text-center shadow-lg text-lg animate-subtle-bounce">
-              ✨ שבועיים התנסות חינם! ✨
+            {/* Floating badge - Simplified without background and emojis */}
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 font-bold px-8 py-3 rounded-full z-10 text-center shadow-lg text-lg text-safechat-dark">
+              שבועיים התנסות חינם! ללא התחייבות
             </div>
             
             <div className="overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
@@ -67,12 +74,12 @@ const Pricing = () => {
                 <div className="text-center mb-8 pt-5">
                   <h3 className="rtl-text text-2xl font-bold mb-6 text-center text-safechat-dark">חבילה חודשית</h3>
                   <div className="flex items-center justify-center rtl-text flex-wrap">
-                    <span className="text-5xl font-extrabold text-safechat-dark">₪49</span>
-                    <span className="text-gray-500 mr-2">/חודש</span>
+                    <span className="text-5xl font-extrabold text-safechat-dark">49<span className="text-4xl">₪</span></span>
+                    <span className="text-gray-400 mr-2">/חודש</span>
                   </div>
                 </div>
 
-                <div className="bg-safechat-gold/20 border border-safechat-gold/40 rounded-lg p-4 mb-8 text-center rtl-text transform transition-all duration-300 hover:bg-safechat-gold/30">
+                <div className="rounded-lg p-4 mb-8 text-center rtl-text transform transition-all duration-300">
                   <p className="font-bold text-safechat-dark text-lg">ללא התחייבות - בטל בכל עת</p>
                 </div>
                 
@@ -94,8 +101,8 @@ const Pricing = () => {
                   לשבועיים נסיון חינם ללא התחייבות
                 </CTAButton>
                 
-                <p className="rtl-text text-center text-safechat-dark font-medium mt-4 text-lg">
-                  ואז רק 49 ש"ח לחודש
+                <p className="rtl-text text-center text-gray-500 font-medium mt-4 text-lg">
+                  ואז רק 49₪ לחודש
                 </p>
               </div>
             </div>

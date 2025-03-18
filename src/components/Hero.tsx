@@ -74,13 +74,13 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <CTAButton size="lg" target="contact">
-                התחילו להגן על ילדיכם - רק 49 ₪ לחודש
+                לשבועיים נסיון חינם ללא התחייבות
               </CTAButton>
             </div>
             
             <div className="animate-pulse bg-safechat-gold/20 border-2 border-safechat-gold rounded-lg px-4 py-3 max-w-md mx-auto">
               <p className="rtl-text text-base sm:text-lg font-bold text-safechat-dark text-center">
-                ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+                ✨ ואז רק 49 ש"ח לחודש ✨
               </p>
             </div>
 

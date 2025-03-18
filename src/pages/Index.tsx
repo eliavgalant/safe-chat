@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -52,8 +51,9 @@ const Index = () => {
             </p>
           </div>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            התחילו עכשיו - שבועיים חינם
+            לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
+          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       
@@ -71,8 +71,9 @@ const Index = () => {
             </p>
           </div>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            להתחלת השימוש - 49 ₪ לחודש
+            לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
+          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       
@@ -94,8 +95,9 @@ const Index = () => {
             </p>
           </div>
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
-            הצטרפו עכשיו - שבועיים התנסות חינם
+            לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
+          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       

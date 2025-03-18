@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
@@ -67,7 +66,7 @@ const Pricing = () => {
                 </div>
   
                 <CTAButton className="w-full justify-center rtl-text text-base md:text-lg shadow-lg hover:shadow-xl" target="contact">
-                  התחילו עכשיו - שבועיים חינם
+                  לשבועיים נסיון חינם ללא התחייבות
                 </CTAButton>
               </div>
             </div>

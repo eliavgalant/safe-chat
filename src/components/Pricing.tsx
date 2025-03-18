@@ -25,7 +25,7 @@ const Pricing = () => {
       });
     };
   }, []);
-  const features = ["ללא התחייבות - בטל בכל עת", "תמיכה טכנית 24/7 כלולה במחיר"];
+  const features = ["שבועיים התנסות חינם", "ללא התחייבות - בטל בכל עת", "תמיכה טכנית 24/7 כלולה במחיר"];
   return <section id="pricing" ref={sectionRef} className="container-padding bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -38,7 +38,7 @@ const Pricing = () => {
         <div className="max-w-sm md:max-w-lg mx-auto">
           <div className="animate-on-scroll relative">
             <div className="absolute -top-4 md:-top-5 left-1/2 transform -translate-x-1/2 bg-safechat-gold text-safechat-dark font-bold px-4 md:px-6 py-1 md:py-2 rounded-full z-10 text-center w-auto shadow-md text-sm md:text-base">
-              מחיר השקה מיוחד
+              שבועיים התנסות חינם
             </div>
             <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl">
               <div className="absolute -top-24 -right-24 w-40 h-40 bg-safechat-gold rounded-full opacity-20"></div>
@@ -50,7 +50,6 @@ const Pricing = () => {
                   <div className="flex items-center justify-center rtl-text flex-wrap">
                     <span className="text-4xl md:text-5xl font-bold text-safechat-dark">₪49</span>
                     <span className="text-gray-500 mr-2">/חודש</span>
-                    <span className="text-gray-400 line-through mr-2 text-sm md:text-base">(במקום 150 ₪)</span>
                   </div>
                 </div>
   
@@ -64,7 +63,7 @@ const Pricing = () => {
                 </div>
   
                 <CTAButton className="w-full justify-center rtl-text text-base md:text-lg shadow-lg hover:shadow-xl" target="contact">
-                  התחילו עכשיו - רק 49 ₪ לחודש
+                  התחילו עכשיו - שבועיים חינם
                 </CTAButton>
               </div>
             </div>

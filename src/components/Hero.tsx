@@ -79,7 +79,7 @@ const Hero = () => {
             </div>
             
             <p className="rtl-text text-sm sm:text-base text-amber-400 font-semibold text-center mt-2">
-              מחיר השקה מיוחד במקום 150 ₪ <span className="text-gray-500">| ללא התחייבות</span>
+              שבועיים התנסות חינם! <span className="text-gray-500">| ללא התחייבות</span>
             </p>
 
             <div className="mt-12 space-y-6 text-center pt-20 mb-12">

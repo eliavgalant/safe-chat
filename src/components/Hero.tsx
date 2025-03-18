@@ -74,7 +74,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <CTAButton size="lg" target="contact">
-                לשבועיים נסיון חינם ללא התחייבות
+                לשבועיים נסיון חינם ללא התחייבות!
               </CTAButton>
             </div>
             

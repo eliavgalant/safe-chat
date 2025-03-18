@@ -98,9 +98,7 @@ const Pricing = () => {
                   לשבועיים נסיון חינם ללא התחייבות
                 </CTAButton>
                 
-                <p className="rtl-text text-center text-gray-500 font-medium mt-4 text-lg">
-                  ואז רק 49₪ לחודש
-                </p>
+                {/* Removed the pricing text "ואז רק 49₪ לחודש" */}
               </div>
             </div>
           </div>

@@ -60,10 +60,7 @@ const Pricing = () => {
         <div className="max-w-md mx-auto relative">
           {/* Price card */}
           <div className="animate-on-scroll relative mt-14">
-            {/* Floating badge - Simplified without background and emojis */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 font-bold px-8 py-3 rounded-full z-10 text-center shadow-lg text-lg text-safechat-dark">
-              שבועיים התנסות חינם! ללא התחייבות
-            </div>
+            {/* Removed the floating badge */}
             
             <div className="overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
               {/* Card glow effects */}

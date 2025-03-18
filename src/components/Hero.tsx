@@ -80,7 +80,7 @@ const Hero = () => {
             
             <div className="mx-auto">
               <p className="rtl-text text-base sm:text-lg font-bold text-gray-400 text-center">
-                ואז רק 49₪ לחודש
+                ואז רק 49₪ לחודש | ניתן לבטל בכל עת
               </p>
             </div>
 

@@ -49,7 +49,6 @@ const Index = () => {
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
-          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       
@@ -69,7 +68,6 @@ const Index = () => {
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
-          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       
@@ -93,7 +91,6 @@ const Index = () => {
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
-          <p className="rtl-text mt-3 text-safechat-gold font-medium">ואז רק 49 ש"ח לחודש</p>
         </div>
       </section>
       

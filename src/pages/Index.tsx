@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -46,7 +47,7 @@ const Index = () => {
             הגנו על הילדים שלכם בקבוצות וואטסאפ כבר היום
           </h2>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            התחילו עכשיו
+            התחילו עכשיו - שבועיים חינם
           </CTAButton>
         </div>
       </section>
@@ -60,7 +61,7 @@ const Index = () => {
             צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
           </h2>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
-            להתחלת השימוש
+            להתחלת השימוש - 49 ₪ לחודש
           </CTAButton>
         </div>
       </section>
@@ -78,7 +79,7 @@ const Index = () => {
             תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
           </p>
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
-            הצטרפו עכשיו
+            הצטרפו עכשיו - שבועיים התנסות חינם
           </CTAButton>
         </div>
       </section>

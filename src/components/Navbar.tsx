@@ -78,7 +78,7 @@ const Navbar = () => {
           onClick={() => scrollToSection('contact')}
           className="hidden md:flex bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium"
         >
-          התחל עכשיו
+          התחל עכשיו - שבועיים חינם
         </Button>
 
         {/* Mobile menu button */}
@@ -128,7 +128,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium w-full rtl-text"
             >
-              התחל עכשיו
+              התחל עכשיו - 49 ₪ לחודש
             </Button>
           </div>
         </div>

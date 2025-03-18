@@ -82,7 +82,7 @@ const Navbar = () => {
             לשבועיים נסיון חינם ללא התחייבות
           </Button>
           <span className="text-xs font-bold text-safechat-gold animate-pulse mt-1">
-            ✨ ואז רק 49 ש"ח לחודש ✨
+            
           </span>
         </div>
 

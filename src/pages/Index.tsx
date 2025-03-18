@@ -60,11 +60,6 @@ const Index = () => {
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
           </h2>
-          <div className="bg-white/10 mx-auto mb-6 max-w-md rounded-lg border-2 border-safechat-gold p-3 animate-pulse">
-            <p className="rtl-text text-lg font-bold text-white text-center">
-              ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
-            </p>
-          </div>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>

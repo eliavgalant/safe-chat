@@ -1,5 +1,7 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const faqs = [
   {
@@ -51,6 +53,7 @@ const faqs = [
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -79,27 +82,27 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return <section id="faq" ref={sectionRef} className="container-padding bg-gray-50">
+  return <section id="faq" ref={sectionRef} className="py-10 md:py-16 px-3 md:px-8 bg-gray-50">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="animate-on-scroll heading-lg text-black mb-4">שאלות נפוצות</h2>
-          <p className="animate-on-scroll rtl-text text-xl text-gray-600 text-center">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="animate-on-scroll heading-lg text-black mb-2 md:mb-4 text-2xl md:text-3xl">שאלות נפוצות</h2>
+          <p className="animate-on-scroll rtl-text text-base md:text-xl text-gray-600 text-center">
             תשובות לשאלות נפוצות על השירות שלנו
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => <div key={index} className="animate-on-scroll mb-4" style={{
+          {faqs.map((faq, index) => <div key={index} className="animate-on-scroll mb-2 md:mb-4" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              <button className={`w-full rtl-text bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center text-left transition-all
+              <button className={`w-full rtl-text bg-white p-3 md:p-6 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center text-left transition-all
                 ${openIndex === index ? 'bg-safechat-gold/5 border-safechat-gold/30' : 'hover:bg-gray-50'}`} onClick={() => toggleFAQ(index)}>
-                <span className="font-bold text-lg text-right">{faq.question}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`} />
+                <span className="font-bold text-sm md:text-lg text-right">{faq.question}</span>
+                <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`} />
               </button>
               
-              {openIndex === index && <div className="rtl-text bg-white p-6 rounded-b-xl border-x border-b border-gray-100 shadow-sm animate-accordion-down">
-                  <p className="text-gray-600">{faq.answer}</p>
+              {openIndex === index && <div className="rtl-text bg-white p-3 md:p-6 rounded-b-xl border-x border-b border-gray-100 shadow-sm animate-accordion-down">
+                  <p className="text-gray-600 text-xs md:text-base">{faq.answer}</p>
                 </div>}
             </div>)}
         </div>
@@ -108,3 +111,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+

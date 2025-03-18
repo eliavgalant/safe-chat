@@ -78,11 +78,7 @@ const Index = () => {
           <p className="rtl-text text-xl mb-6 max-w-2xl mx-auto opacity-90">
             תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
           </p>
-          <div className="bg-white/10 mx-auto mb-6 max-w-md rounded-lg border-2 border-safechat-gold p-3 animate-pulse">
-            <p className="rtl-text text-lg font-bold text-white text-center">
-              ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
-            </p>
-          </div>
+          {/* Removed the pulsing white notification box with gold border */}
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>

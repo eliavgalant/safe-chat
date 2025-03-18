@@ -74,12 +74,17 @@ const Navbar = () => {
           </button>
         </nav>
 
-        <Button 
-          onClick={() => scrollToSection('contact')}
-          className="hidden md:flex bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium"
-        >
-          התחל עכשיו - שבועיים חינם
-        </Button>
+        <div className="hidden md:flex flex-col items-end">
+          <Button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium"
+          >
+            התחל עכשיו - שבועיים חינם
+          </Button>
+          <span className="text-xs font-bold text-safechat-gold animate-pulse mt-1">
+            ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+          </span>
+        </div>
 
         {/* Mobile menu button */}
         <button
@@ -124,6 +129,11 @@ const Navbar = () => {
             >
               שאלות נפוצות
             </button>
+            <div className="bg-safechat-gold/20 border border-safechat-gold rounded-lg p-2 mb-2 text-center rtl-text animate-pulse">
+              <p className="font-bold text-safechat-dark text-sm">
+                ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+              </p>
+            </div>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium w-full rtl-text"

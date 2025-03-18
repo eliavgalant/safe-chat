@@ -46,6 +46,11 @@ const Index = () => {
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             הגנו על הילדים שלכם בקבוצות וואטסאפ כבר היום
           </h2>
+          <div className="bg-safechat-gold/20 mx-auto mb-6 max-w-md rounded-lg border-2 border-safechat-gold p-3 animate-pulse">
+            <p className="rtl-text text-lg font-bold text-white text-center">
+              ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+            </p>
+          </div>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
             התחילו עכשיו - שבועיים חינם
           </CTAButton>
@@ -60,6 +65,11 @@ const Index = () => {
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
           </h2>
+          <div className="bg-white/10 mx-auto mb-6 max-w-md rounded-lg border-2 border-safechat-gold p-3 animate-pulse">
+            <p className="rtl-text text-lg font-bold text-white text-center">
+              ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+            </p>
+          </div>
           <CTAButton className="mx-auto rtl-text text-lg" target="contact">
             להתחלת השימוש - 49 ₪ לחודש
           </CTAButton>
@@ -75,9 +85,14 @@ const Index = () => {
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             הגנו על ילדיכם ברשת כבר עכשיו
           </h2>
-          <p className="rtl-text text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="rtl-text text-xl mb-6 max-w-2xl mx-auto opacity-90">
             תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
           </p>
+          <div className="bg-white/10 mx-auto mb-6 max-w-md rounded-lg border-2 border-safechat-gold p-3 animate-pulse">
+            <p className="rtl-text text-lg font-bold text-white text-center">
+              ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+            </p>
+          </div>
           <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
             הצטרפו עכשיו - שבועיים התנסות חינם
           </CTAButton>

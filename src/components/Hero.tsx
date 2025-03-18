@@ -78,9 +78,11 @@ const Hero = () => {
               </CTAButton>
             </div>
             
-            <p className="rtl-text text-sm sm:text-base text-amber-400 font-semibold text-center mt-2">
-              שבועיים התנסות חינם! <span className="text-gray-500">| ללא התחייבות</span>
-            </p>
+            <div className="animate-pulse bg-safechat-gold/20 border-2 border-safechat-gold rounded-lg px-4 py-3 max-w-md mx-auto">
+              <p className="rtl-text text-base sm:text-lg font-bold text-safechat-dark text-center">
+                ✨ שבועיים התנסות חינם! | ללא התחייבות ✨
+              </p>
+            </div>
 
             <div className="mt-12 space-y-6 text-center pt-20 mb-12">
               <h2 className="rtl-text text-xl sm:text-2xl md:text-3xl font-bold text-gradient shadow-text text-center">

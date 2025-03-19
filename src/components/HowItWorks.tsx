@@ -52,7 +52,7 @@ const HowItWorks = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-          <h2 className="animate-on-scroll heading-lg gold-gradient-text mb-4 relative inline-block text-2xl md:text-3xl lg:text-4xl animate-pulse">
+          <h2 className="animate-on-scroll heading-lg gold-gradient-text mb-4 relative inline-block text-2xl md:text-3xl lg:text-4xl">
             איך זה עובד?
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-safechat-gold rounded-full"></span>
           </h2>
@@ -73,11 +73,11 @@ const HowItWorks = () => {
             >
               <div className="absolute inset-0 md:inset-[15%] bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <div className="shine-effect relative z-10 bg-white p-3 md:p-5 rounded-full shadow-lg mb-4 md:mb-6 ring-2 ring-gray-100 group-hover:ring-safechat-gold/30 transition-all duration-300 animate-bounce">
+              <div className="shine-effect relative z-10 bg-white p-3 md:p-5 rounded-full shadow-lg mb-4 md:mb-6 ring-2 ring-gray-100 group-hover:ring-safechat-gold/30 transition-all duration-300">
                 {step.icon}
               </div>
               
-              <h3 className="rtl-text text-lg md:text-xl font-bold mb-2 md:mb-4 relative z-10 animate-fade-in-up">{step.title}</h3>
+              <h3 className="rtl-text text-lg md:text-xl font-bold mb-2 md:mb-4 relative z-10">{step.title}</h3>
               
               <p className="rtl-text text-sm md:text-base text-gray-600 relative z-10">{step.description}</p>
               

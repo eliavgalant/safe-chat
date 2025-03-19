@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
@@ -59,53 +58,51 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="max-w-[280px] sm:max-w-sm md:max-w-md mx-auto relative">
+        <div className="max-w-[280px] sm:max-w-sm md:max-w-sm mx-auto relative">
           {/* Price card */}
-          <div className="animate-on-scroll relative mt-6 md:mt-14">
+          <div className="animate-on-scroll relative mt-6 md:mt-10">
             {/* Removed the floating badge */}
             
-            <div className="overflow-hidden rounded-xl md:rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
+            <div className="overflow-hidden rounded-xl md:rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
               {/* Card glow effects */}
-              <div className="absolute -top-12 md:-top-24 -right-12 md:-right-24 w-24 md:w-48 h-24 md:h-48 bg-safechat-gold rounded-full opacity-10"></div>
-              <div className="absolute -bottom-12 md:-bottom-24 -left-12 md:-left-24 w-24 md:w-48 h-24 md:h-48 bg-safechat-gold rounded-full opacity-10"></div>
+              <div className="absolute -top-12 md:-top-16 -right-12 md:-right-16 w-24 md:w-32 h-24 md:h-32 bg-safechat-gold rounded-full opacity-10"></div>
+              <div className="absolute -bottom-12 md:-bottom-16 -left-12 md:-left-16 w-24 md:w-32 h-24 md:h-32 bg-safechat-gold rounded-full opacity-10"></div>
               
-              <div className="glass-card border border-safechat-gold/40 md:border-2 md:border-safechat-gold/60 p-3 md:p-8 rounded-lg md:rounded-2xl bg-gradient-to-br from-white via-white to-gray-50">
-                <div className="text-center mb-4 md:mb-8 pt-2 md:pt-5">
-                  <h3 className="rtl-text text-lg md:text-2xl font-bold mb-3 md:mb-6 text-center text-safechat-dark">חבילה חודשית</h3>
+              <div className="glass-card border border-safechat-gold/40 md:border-2 md:border-safechat-gold/60 p-3 md:p-6 rounded-lg md:rounded-xl bg-gradient-to-br from-white via-white to-gray-50">
+                <div className="text-center mb-4 md:mb-6 pt-2 md:pt-3">
+                  <h3 className="rtl-text text-lg md:text-xl font-bold mb-3 md:mb-4 text-center text-safechat-dark">חבילה חודשית</h3>
                   <div className="flex items-center justify-center rtl-text flex-wrap">
-                    <span className="text-3xl md:text-5xl font-extrabold text-safechat-dark">49<span className="text-2xl md:text-4xl">₪</span></span>
+                    <span className="text-3xl md:text-4xl font-extrabold text-safechat-dark">49<span className="text-2xl md:text-3xl">₪</span></span>
                     <span className="text-gray-400 mr-2 text-sm md:text-base">/חודש</span>
                   </div>
                 </div>
 
-                <div className="rounded-lg p-2 md:p-4 mb-4 md:mb-8 text-center rtl-text transform transition-all duration-300">
-                  <p className="font-bold text-safechat-dark text-sm md:text-lg">ללא התחייבות - בטל בכל עת</p>
+                <div className="rounded-lg p-2 md:p-3 mb-4 md:mb-6 text-center rtl-text transform transition-all duration-300">
+                  <p className="font-bold text-safechat-dark text-sm md:text-base">ללא התחייבות - בטל בכל עת</p>
                 </div>
                 
-                <div className="space-y-2 md:space-y-4 mb-4 md:mb-8">
+                <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                   {features.map((feature, index) => (
-                    <div key={index} className="flex items-center rtl-text gap-1.5 md:gap-3 bg-white/80 p-1.5 md:p-3 rounded-lg transition-all duration-200 hover:bg-white shadow-sm hover:shadow">
-                      <div className="flex-shrink-0 bg-gradient-to-r from-safechat-gold to-safechat-gold-light rounded-full p-0.5 md:p-1.5 shadow-sm">
-                        <Check className="w-2.5 h-2.5 md:w-4 md:h-4 text-safechat-dark" />
+                    <div key={index} className="flex items-center rtl-text gap-1.5 md:gap-2 bg-white/80 p-1.5 md:p-2 rounded-lg transition-all duration-200 hover:bg-white shadow-sm hover:shadow">
+                      <div className="flex-shrink-0 bg-gradient-to-r from-safechat-gold to-safechat-gold-light rounded-full p-0.5 md:p-1 shadow-sm">
+                        <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-safechat-dark" />
                       </div>
-                      <span className="text-xs md:text-base font-medium">{feature}</span>
+                      <span className="text-xs md:text-sm font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <CTAButton 
-                  className="w-full justify-center rtl-text text-sm md:text-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-[1.02]" 
+                  className="w-full justify-center rtl-text text-sm md:text-base shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-[1.02]" 
                   target="contact"
                 >
                   לשבועיים נסיון חינם ללא התחייבות
                 </CTAButton>
-                
-                {/* Removed the pricing text "ואז רק 49₪ לחודש" */}
               </div>
             </div>
           </div>
           
-          <p className="rtl-text text-center text-gray-600 mt-4 md:mt-8 animate-on-scroll text-xs md:text-base md:font-medium">
+          <p className="rtl-text text-center text-gray-600 mt-4 md:mt-6 animate-on-scroll text-xs md:text-sm md:font-medium">
             עדיין יש לכם שאלות? <a href="#contact" className="text-safechat-gold hover:text-safechat-gold-dark font-bold hover:underline transition-colors">צרו קשר עם צוות התמיכה שלנו</a>
           </p>
         </div>

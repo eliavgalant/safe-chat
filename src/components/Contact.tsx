@@ -14,7 +14,7 @@ const Contact = () => {
     childPhone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [urlParam, setUrlParam] = useState<string | null>(null);
+  const [affiliateCode, setAffiliateCode] = useState<string | null>(null);
   const [phoneErrors, setPhoneErrors] = useState({
     parentPhone: '',
     childPhone: ''
@@ -30,7 +30,7 @@ const Contact = () => {
       if (paramIndex !== -1) {
         // Get everything after the "?" character
         const param = url.substring(paramIndex + 1);
-        setUrlParam(param);
+        setAffiliateCode(param);
       }
     };
 
@@ -92,7 +92,7 @@ const Contact = () => {
         phone: formData.parentPhone,
         childPhone: formData.childPhone,
         // Include the URL parameter if it exists
-        urlParam: urlParam || ""
+        affiliateCode: affiliateCode || ""
       };
       
       console.log("Sending data to webhook:", formattedData);

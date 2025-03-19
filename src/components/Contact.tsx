@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,6 +13,23 @@ const Contact = () => {
     childPhone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [urlParam, setUrlParam] = useState<string | null>(null);
+
+  // Extract URL parameter when component mounts
+  useEffect(() => {
+    const extractUrlParameter = () => {
+      const url = window.location.href;
+      // Check if there's a parameter after "?"
+      const paramIndex = url.indexOf('?');
+      if (paramIndex !== -1) {
+        // Get everything after the "?" character
+        const param = url.substring(paramIndex + 1);
+        setUrlParam(param);
+      }
+    };
+
+    extractUrlParameter();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
@@ -36,8 +53,13 @@ const Contact = () => {
         firstName: formData.name,
         email: formData.email,
         phone: formData.parentPhone,
-        childPhone: formData.childPhone
+        childPhone: formData.childPhone,
+        // Include the URL parameter if it exists
+        urlParam: urlParam || ""
       };
+      
+      console.log("Sending data to webhook:", formattedData);
+      
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {

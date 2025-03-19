@@ -10,22 +10,25 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(element => {
+      elements.forEach((element, index) => {
         const rect = element.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight * 0.85;
         if (isVisible) {
-          if (element.classList.contains('reveal-left')) {
-            element.classList.add('animate-slide-right');
-          } else if (element.classList.contains('reveal-right')) {
-            element.classList.add('animate-slide-left');
-          } else {
-            element.classList.add('animate-fade-in-up');
-          }
+          setTimeout(() => {
+            if (element.classList.contains('reveal-left')) {
+              element.classList.add('animate-slide-right');
+            } else if (element.classList.contains('reveal-right')) {
+              element.classList.add('animate-slide-left');
+            } else {
+              element.classList.add('animate-fade-in-up');
+            }
+          }, index * 100); // Staggered animation delay
         }
       });
     };
@@ -35,42 +38,44 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return <div className="min-h-screen overflow-x-hidden">
+  
+  return (
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <HowItWorks />
       
       {/* First CTA Section */}
-      <section className="py-16 bg-black text-white">
+      <ScrollReveal animation="slide-up" className="py-16 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             הגנו על הילדים שלכם בקבוצות וואטסאפ כבר היום
           </h2>
-          <CTAButton className="mx-auto rtl-text text-lg" target="contact">
+          <CTAButton className="mx-auto rtl-text text-lg animate-pulse" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
         </div>
-      </section>
+      </ScrollReveal>
       
       <Benefits />
       
       {/* Second CTA Section */}
-      <section className="py-16 bg-safechat-dark-light text-white">
+      <ScrollReveal animation="slide-right" className="py-16 bg-safechat-dark-light text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             צרו סביבה בטוחה לילדיכם ברשת - בלחיצת כפתור
           </h2>
-          <CTAButton className="mx-auto rtl-text text-lg" target="contact">
+          <CTAButton className="mx-auto rtl-text text-lg animate-subtle-bounce" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
         </div>
-      </section>
+      </ScrollReveal>
       
       <Pricing />
       <Testimonials />
       
       {/* Third CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-light text-white">
+      <ScrollReveal animation="slide-left" className="py-16 bg-gradient-to-r from-safechat-dark to-safechat-dark-light text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-md mb-6 max-w-3xl mx-auto rtl-text text-center">
             הגנו על ילדיכם ברשת כבר עכשיו
@@ -78,17 +83,17 @@ const Index = () => {
           <p className="rtl-text text-xl mb-6 max-w-2xl mx-auto opacity-90">
             תוכלו להתחיל בפחות מ-5 דקות ולקבל שקט נפשי בידיעה שילדיכם מוגנים
           </p>
-          {/* Removed the pulsing white notification box with gold border */}
-          <CTAButton className="mx-auto rtl-text text-lg" size="lg" target="contact">
+          <CTAButton className="mx-auto rtl-text text-lg animate-subtle-bounce" size="lg" target="contact">
             לשבועיים נסיון חינם ללא התחייבות
           </CTAButton>
         </div>
-      </section>
+      </ScrollReveal>
       
       <FAQ />
       <Contact />
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Index;

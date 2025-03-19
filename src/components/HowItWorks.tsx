@@ -71,7 +71,7 @@ const HowItWorks = () => {
                 background: "linear-gradient(to bottom right, rgba(255,255,255,0.9), rgba(255,255,255,0.7))"
               }}
             >
-              <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 md:inset-[15%] bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="shine-effect relative z-10 bg-white p-3 md:p-5 rounded-full shadow-lg mb-4 md:mb-6 ring-2 ring-gray-100 group-hover:ring-safechat-gold/30 transition-all duration-300">
                 {step.icon}

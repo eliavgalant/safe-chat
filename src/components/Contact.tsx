@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,11 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [urlParam, setUrlParam] = useState<string | null>(null);
+  const [phoneErrors, setPhoneErrors] = useState({
+    parentPhone: '',
+    childPhone: ''
+  });
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   // Extract URL parameter when component mounts
   useEffect(() => {
@@ -40,10 +46,41 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+
+    // Clear error when user types in phone fields
+    if (name === 'parentPhone' || name === 'childPhone') {
+      setPhoneErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validatePhoneNumber = (phone: string, fieldName: 'parentPhone' | 'childPhone'): boolean => {
+    // Israeli phone number format: 05X-XXXXXXX or 05XXXXXXXX
+    const israeliPhonePattern = /^(05\d)[-]?(\d{7})$/;
+    
+    if (!israeliPhonePattern.test(phone)) {
+      setPhoneErrors(prev => ({
+        ...prev,
+        [fieldName]: 'מספר טלפון לא תקין'
+      }));
+      return false;
+    }
+    return true;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate phone numbers
+    const isParentPhoneValid = validatePhoneNumber(formData.parentPhone, 'parentPhone');
+    const isChildPhoneValid = validatePhoneNumber(formData.childPhone, 'childPhone');
+    
+    if (!isParentPhoneValid || !isChildPhoneValid) {
+      return;
+    }
+    
     setIsSubmitting(true);
     try {
       const webhookUrl = "https://hook.eu2.make.com/dc67buci793zutacrfiu8caht4ftu6s4";
@@ -68,10 +105,10 @@ const Contact = () => {
         body: JSON.stringify(formattedData)
       });
       if (response.ok) {
-        toast({
-          title: "הודעה נשלחה בהצלחה",
-          description: "נציג יצור איתך קשר בהקדם"
-        });
+        // Show success dialog instead of toast
+        setShowSuccessDialog(true);
+        
+        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -126,12 +163,36 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
               <div className="space-y-2">
                 <Label htmlFor="parentPhone" className="rtl-text text-white block">טלפון של ההורה</Label>
-                <Input id="parentPhone" name="parentPhone" type="tel" value={formData.parentPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של ההורה" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+                <Input 
+                  id="parentPhone" 
+                  name="parentPhone" 
+                  type="tel" 
+                  value={formData.parentPhone} 
+                  onChange={handleChange} 
+                  placeholder="הכנס את מספר הטלפון של ההורה" 
+                  className={`rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full ${phoneErrors.parentPhone ? 'border-red-500' : ''}`} 
+                  required 
+                />
+                {phoneErrors.parentPhone && (
+                  <p className="text-red-500 text-sm mt-1 rtl-text">{phoneErrors.parentPhone}</p>
+                )}
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="childPhone" className="rtl-text text-white block">טלפון של הילד</Label>
-                <Input id="childPhone" name="childPhone" type="tel" value={formData.childPhone} onChange={handleChange} placeholder="הכנס את מספר הטלפון של הילד" className="rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full" required />
+                <Input 
+                  id="childPhone" 
+                  name="childPhone" 
+                  type="tel" 
+                  value={formData.childPhone} 
+                  onChange={handleChange} 
+                  placeholder="הכנס את מספר הטלפון של הילד" 
+                  className={`rtl-text bg-black/20 border-gray-700 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-safechat-gold/50 focus:border-safechat-gold w-full ${phoneErrors.childPhone ? 'border-red-500' : ''}`} 
+                  required 
+                />
+                {phoneErrors.childPhone && (
+                  <p className="text-red-500 text-sm mt-1 rtl-text">{phoneErrors.childPhone}</p>
+                )}
               </div>
             </div>
             
@@ -143,6 +204,27 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center rtl-text text-xl">תודה על ההרשמה</DialogTitle>
+            <DialogDescription className="text-center rtl-text">
+              קיבלת כעת הודעת ווטסאפ להמשך התהליך
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="sm:justify-center">
+            <Button 
+              type="button" 
+              onClick={() => setShowSuccessDialog(false)}
+              className="bg-safechat-gold hover:bg-safechat-gold-dark text-safechat-dark font-medium rtl-text"
+            >
+              סגור
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>;
 };
 
